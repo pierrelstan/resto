@@ -42,3 +42,6 @@ next-env.d.ts
 # history
 .history
 
+
+#eslint
+.eslintcache

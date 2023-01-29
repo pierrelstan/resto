@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
+    "format": "eslint --fix .",
     "cypress": "cypress open",
     "cypress:headless": "cypress run",
     "e2e": "start-server-and-test dev http://localhost:3000 cypress",
@@ -12,6 +13,11 @@
     "type-check": "tsc",
     "test": "jest",
     "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{ts,tsx}": "bash -c 'tsc --noEmit'",
+    "*.{js,jsx,ts,tsx,css,md}": "prettier --write ."
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.3.6",

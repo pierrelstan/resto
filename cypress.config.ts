@@ -2,7 +2,6 @@
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
-  videoUploadOnPasses: false,
   component: {
     devServer: {
       framework: 'next',
@@ -16,4 +15,5 @@ export default defineConfig({
       // implement node event listeners here
     },
   },
+  video: false,
 });
