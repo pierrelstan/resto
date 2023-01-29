@@ -1,0 +1,20 @@
+name: CI
+on:
+  pull_request:
+    branches: [ main ]
+jobs:
+  builds-project:
+    name: Build builds-project
+    runs-on: ubuntu-latest
+    steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+     - name: Install yarn dependencies
+       run: yarn install
+     - name: Lint
+       run: yarn lint
+     - name: Cypress run
+       uses: cypress-io/github-action@v5.x.x # use the explicit version number
+       with:
+          build: yarn  build
+          start: yarn start
