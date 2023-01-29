@@ -34,3 +34,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# vscode
+.vscode
+
+# history
+.history
+
+
+#eslint
+.eslintcache
