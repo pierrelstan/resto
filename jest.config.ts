@@ -4,7 +4,8 @@ const config: InitialOptionsTsJest = {
   preset: 'ts-jest',
   setupFilesAfterEnv: ['<rootDir>/setupTests.ts'],
   transform: {
-    '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
+    '.+\\.(css|styl|yarn add --dev @testing-library/reactless|sass|scss)$':
+      'jest-css-modules-transform',
   },
   testEnvironment: 'jsdom',
   globals: {
