@@ -16,7 +16,7 @@ jobs:
        uses: cypress-io/github-action@v5 # use the explicit version number
 
      - name: Cypress components
-       run: npx cypress run
+       run:  cypress --component
 
      - name: Build and Start
        run: yarn run build && yarn  start
