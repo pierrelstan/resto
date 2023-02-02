@@ -14,11 +14,10 @@ jobs:
 
      - name: Cypress
        uses: cypress-io/github-action@v5 # use the explicit version number
-
-     - name: Components
-       run: yarn cypress run  --component
-       
-     - name: e2e
-       run: yarn run build & yarn start
+       with:
+        # to run component tests we need to use "component: true"
+        component: true
+        build: yarn build
+        start: yarn start
 
 

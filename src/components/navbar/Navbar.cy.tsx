@@ -1,8 +1,8 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import GlobalStyle from '../../src/styles/globalstyles';
-import theme from '../../src/styles/theme';
-import Navbar from '../../src/components/navbar/Navbar';
+import GlobalStyle from '../../styles/globalstyles';
+import theme from '../../styles/theme';
+import Navbar from './Navbar';
 
 export const GlobalTheme = (props: any) => {
   return (
