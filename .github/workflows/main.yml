@@ -12,12 +12,12 @@ jobs:
      # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
 
-     - name: Cypress Component
-       run: yarn cy:run
-
-     - name: Cypress run
+     - name: Cypress
        uses: cypress-io/github-action@v5 # use the explicit version number
-       with:
-          build: yarn  build
-          start: yarn start
+
+     - name: Cypress components
+       run: cy:run
+
+     - name: Build and test
+       run: yarn run build && yarn  start
 
