@@ -12,10 +12,15 @@ jobs:
      # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
 
-     - name: Cypress
+     - name: End-to-end tests
+       uses: cypress-io/github-action@v5 # use the explicit version number
+
+
+     - name: Component tests
        uses: cypress-io/github-action@v5 # use the explicit version number
        with:
         # to run component tests we need to use "component: true"
+        install: false
         component: true
         build: yarn build
         start: yarn start
