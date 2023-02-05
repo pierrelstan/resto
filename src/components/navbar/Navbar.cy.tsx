@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { ThemeProvider } from 'styled-components';
+
+import Navbar from './Navbar';
 import GlobalStyle from '../../styles/globalstyles';
 import theme from '../../styles/theme';
-import Navbar from './Navbar';
 
 export const GlobalTheme = (props: any) => {
   return (
@@ -21,5 +23,6 @@ describe('<Navbar />', () => {
         <Navbar />
       </GlobalTheme>
     );
+    cy.get('li').should('have.length', 8);
   });
 });

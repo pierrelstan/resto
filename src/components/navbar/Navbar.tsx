@@ -1,76 +1,90 @@
-import Image from 'next/image';
+import { useState } from 'react';
+
+import { IoMenuSharp, IoCloseSharp } from 'react-icons/io5';
 import styled from 'styled-components';
+
+import { ToggleProps } from 'utils/types';
+
+import List from './List';
+import Logo from '../common/Logo';
 
 const Nav = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   background-color: ${(props) => props.theme.colors.black};
   color: ${(props) => props.theme.colors.white};
-  padding-top: 30px;
-  padding-bottom: 10px;
 
   @media (max-width: 845px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
   }
 `;
 
-const ListItems = styled.ul`
+const ListItems = styled.ul<ToggleProps>`
   display: flex;
-  flex-wrap: wrap;
-  list-style-type: none;
-
-  @media (max-width: 386px) {
-    justify-content: center;
-    padding: 0;
-  }
-  @media (max-width: 527px) {
-    justify-content: center;
-    padding: 0;
-  }
-`;
-
-const List = styled.li`
-  padding: 10px;
-  text-transform: uppercase;
-  font-size: 18px;
+  flex-direction: row;
+  justify-content: center;
   @media (max-width: 845px) {
-    font-size: 16px;
+    display: ${(props) => (props.toggle === false ? 'none' : 'block')};
+    flex-direction: column;
   }
 `;
-const Button = styled.button`
-  background: ${(props) => props.theme.colors.black};
-  color: ${(props) => props.theme.colors.white};
-  padding: 10px 20px;
-  border-color: ${(props) => props.theme.colors.white};
-  border-radius: 5px;
-  text-transform: uppercase;
-  font-size: 18px;
 
+const WrapperLogo = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const Drawer = styled.div`
+  display: none;
   @media (max-width: 845px) {
-    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
   }
 `;
 
-export default function Navbar() {
+const Wrapper = styled.div<ToggleProps>`
+  position: ${(props) => (props.toggle === true ? 'absolute' : 'relative')};
+  width: 100%;
+`;
+const MenuSharp = styled(IoMenuSharp)`
+  font-size: 6em;
+  @media (max-width: 845px) {
+    font-size: 3em;
+  }
+`;
+const CloseSharp = styled(IoCloseSharp)`
+  font-size: 6em;
+  @media (max-width: 845px) {
+    font-size: 3em;
+  }
+`;
+
+const Navbar: React.FC = () => {
+  const [toggle, setToggle] = useState(false);
+
+  const handleClick = () => {
+    setToggle(!toggle);
+  };
+
   return (
-    <Nav>
-      <div>
-        <Image src={'/logo.svg'} alt="logo" width={70} height={70} />
-      </div>
-      <ListItems>
-        <List>Home</List>
-        <List>Menu</List>
-        <List>About us</List>
-        <List>Our story</List>
-        <List>Blog</List>
-        <List>Contact</List>
+    <Wrapper toggle={toggle}>
+      <Nav>
+        <WrapperLogo>
+          <Logo />
+        </WrapperLogo>
+        <Drawer>
+          {toggle === false && <MenuSharp onClick={handleClick} />}
+          {toggle === true && <CloseSharp onClick={handleClick} />}
+        </Drawer>
+      </Nav>
+
+      <ListItems toggle={toggle}>
+        <List />
       </ListItems>
-      <div>
-        <Button>Login</Button>
-      </div>
-    </Nav>
+    </Wrapper>
   );
-}
+};
+export default Navbar;
