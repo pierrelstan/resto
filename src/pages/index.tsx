@@ -1,13 +1,11 @@
 import type { NextPage } from 'next';
-import styled from 'styled-components';
-import Navbar from '../components/navbar/Navbar';
-import IndexHead from './IndexHead';
 
-const Title = styled.h1``;
+import IndexHead from './IndexHead';
+import Navbar from '../components/navbar/Navbar';
+
 const IndexPage: NextPage = () => (
   <div>
     <IndexHead />
-    {/* <Title>Welcome...</Title> */}
     <Navbar />
   </div>
 );

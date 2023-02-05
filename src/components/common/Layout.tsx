@@ -7,6 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
+  max-width: 50%;
 `;
 export default function Layout({ children }: any) {
   return (
