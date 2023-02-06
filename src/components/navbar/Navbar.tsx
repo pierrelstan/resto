@@ -57,6 +57,7 @@ const Wrapper = styled.div<ToggleProps>`
   background-color: ${(props) => props.theme.colors.black};
   @media (max-width: 939px) {
     position: fixed;
+    justify-content: start;
   }
 `;
 const MenuSharp = styled(IoMenuSharp)`
