@@ -14,10 +14,11 @@ const Nav = styled.div`
   align-items: center;
   background-color: ${(props) => props.theme.colors.black};
   color: ${(props) => props.theme.colors.white};
-
-  @media (max-width: 845px) {
+  padding: 10px;
+  @media (max-width: 939px) {
     justify-content: space-between;
-    margin: 20px;
+    width: 100%;
+    position: fixed;
   }
 `;
 
@@ -25,9 +26,14 @@ const ListItems = styled.ul<ToggleProps>`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  @media (max-width: 845px) {
+  align-items: center;
+  @media (max-width: 939px) {
     display: ${(props) => (props.toggle === false ? 'none' : 'block')};
     flex-direction: column;
+    margin-top: 128px;
+    height: 100vh;
+}
+}
   }
 `;
 
@@ -38,26 +44,31 @@ const WrapperLogo = styled.div`
 
 const Drawer = styled.div`
   display: none;
-  @media (max-width: 845px) {
+  @media (max-width: 939px) {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
   }
 `;
 
 const Wrapper = styled.div<ToggleProps>`
-  position: ${(props) => (props.toggle === true ? 'absolute' : 'relative')};
+  display: flex;
+  justify-content: space-around;
   width: 100%;
+  background-color: ${(props) => props.theme.colors.black};
+  @media (max-width: 939px) {
+    position: fixed;
+    justify-content: start;
+  }
 `;
 const MenuSharp = styled(IoMenuSharp)`
   font-size: 6em;
-  @media (max-width: 845px) {
+  @media (max-width: 939px) {
     font-size: 3em;
   }
 `;
 const CloseSharp = styled(IoCloseSharp)`
   font-size: 6em;
-  @media (max-width: 845px) {
+  @media (max-width: 939px) {
     font-size: 3em;
   }
 `;

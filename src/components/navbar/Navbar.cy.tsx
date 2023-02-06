@@ -23,6 +23,6 @@ describe('<Navbar />', () => {
         <Navbar />
       </GlobalTheme>
     );
-    cy.get('li').should('have.length', 8);
+    cy.get('li').should('have.length', 7);
   });
 });

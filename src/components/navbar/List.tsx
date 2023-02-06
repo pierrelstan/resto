@@ -8,7 +8,7 @@ import { ListProps } from 'utils/types';
 const ListItem = styled.li`
   padding: 10px;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 18px;
   list-style-type: none;
   color: ${(props) => props.theme.colors.white};
 
@@ -18,15 +18,14 @@ const ListItem = styled.li`
 `;
 const NextLink = styled(Link)<ListProps>`
   color: ${(props) => props.theme.colors.white};
-  display: ${(props) =>
-    props.list.toUpperCase() === 'LOGOUT' ? 'none' : 'block'}}
-  padding:5px 10px;
+  display: block;
+`;
 
-
-  &:hover {
-    background-color: ${(props) => props.theme.colors.white};
-    color: ${(props) => props.theme.colors.black};
-  }
+const Button = styled.button`
+  border: 1px solid #fff;
+  background: ${(props) => props.theme.colors.black};
+  border-radius: 5px;
+  padding: 5px 10px;
 `;
 
 const List: React.FC = () => {
@@ -38,14 +37,20 @@ const List: React.FC = () => {
     'Blog',
     'Contact',
     'Login',
-    'Logout',
   ];
   return (
     <>
       {array.map((list, i) => (
         <ListItem key={i}>
-          <NextLink href={`${list.toUpperCase()}`} list={list}>
-            {list}
+          {list === 'Login' && (
+            <Button>
+              <NextLink href={`${list}`} list={list}>
+                {list.toUpperCase()}
+              </NextLink>
+            </Button>
+          )}
+          <NextLink href={`${list}`} list={list}>
+            {list !== 'Login' && list.toUpperCase()}
           </NextLink>
         </ListItem>
       ))}
