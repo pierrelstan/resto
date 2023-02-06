@@ -1,7 +1,6 @@
 import React from 'react';
-
-import Footer from './Footer';
-import { GlobalTheme } from '../navbar/Navbar.cy';
+import Footer from '@/components/common/footer/Footer';
+import { GlobalTheme } from '@/components/common/navbar/Navbar.cy';
 
 describe('<Footer/>', () => {
   it('renders', () => {

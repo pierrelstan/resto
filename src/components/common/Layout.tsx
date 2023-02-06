@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-
-import Footer from '../footer/Footer';
-import Header from '../navbar/Navbar';
+import Footer from '@/components/common/footer/Footer';
+import Navbar from '@/components/common/navbar/Navbar';
 
 const Container = styled.div`
   width: 100%;
@@ -15,7 +14,7 @@ const Container = styled.div`
 export default function Layout({ children }: any) {
   return (
     <Container>
-      <Header />
+      <Navbar />
       {children}
       <Footer />
     </Container>

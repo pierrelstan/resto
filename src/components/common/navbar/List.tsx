@@ -1,9 +1,7 @@
 import React from 'react';
-
 import Link from 'next/link';
 import styled from 'styled-components';
-
-import { ListProps } from 'utils/types';
+import { ListProps } from '@/utils/types';
 
 const ListItem = styled.li`
   padding: 10px;

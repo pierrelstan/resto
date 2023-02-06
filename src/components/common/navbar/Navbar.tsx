@@ -1,12 +1,10 @@
-import { useState } from 'react';
-
+import React, { useState } from 'react';
+import Image from 'next/image';
 import { IoMenuSharp, IoCloseSharp } from 'react-icons/io5';
 import styled from 'styled-components';
-
-import { ToggleProps } from 'utils/types';
-
-import List from './List';
-import Logo from '../common/Logo';
+import List from '@/components/common/navbar/List';
+// eslint-disable-next-line import/order
+import { ToggleProps } from '@/utils/types';
 
 const Nav = styled.div`
   display: flex;
@@ -72,6 +70,7 @@ const CloseSharp = styled(IoCloseSharp)`
     font-size: 3em;
   }
 `;
+const Logo = styled(Image)``;
 
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -84,7 +83,7 @@ const Navbar: React.FC = () => {
     <Wrapper toggle={toggle}>
       <Nav>
         <WrapperLogo>
-          <Logo />
+          <Logo src={'/logo.svg'} alt="Logo" width={100} height={100} />
         </WrapperLogo>
         <Drawer>
           {toggle === false && <MenuSharp onClick={handleClick} />}
