@@ -49,13 +49,15 @@ const Drawer = styled.div`
 `;
 
 const Wrapper = styled.div<ToggleProps>`
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
   background-color: ${(props) => props.theme.colors.black};
   @media (max-width: 939px) {
     position: fixed;
-    justify-content: start;
+    width: 100%;
+  }
+  @media (min-width: 13010px) {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
   }
 `;
 const MenuSharp = styled(IoMenuSharp)`
@@ -71,6 +73,18 @@ const CloseSharp = styled(IoCloseSharp)`
   }
 `;
 const Logo = styled(Image)``;
+
+const Button = styled.button`
+  border: 1px solid #fff;
+  background: ${(props) => props.theme.colors.black};
+  border-radius: 5px;
+  color: ${(props) => props.theme.colors.white};
+  padding: 10px 24px;
+  @media (max-width: 960) {
+    margin-left: 20px;
+    margin-top: 18px;
+  }
+`;
 
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -93,6 +107,9 @@ const Navbar: React.FC = () => {
 
       <ListItems toggle={toggle}>
         <List />
+        <Button>
+          <a href={'/login'}>LOGIN</a>
+        </Button>
       </ListItems>
     </Wrapper>
   );
