@@ -1,12 +1,10 @@
-import { useState } from 'react';
-
+import React, { useState } from 'react';
+import Image from 'next/image';
 import { IoMenuSharp, IoCloseSharp } from 'react-icons/io5';
 import styled from 'styled-components';
-
-import { ToggleProps } from 'utils/types';
-
-import List from './List';
-import Logo from '../common/Logo';
+import List from '@/components/common/navbar/List';
+// eslint-disable-next-line import/order
+import { ToggleProps } from '@/utils/types';
 
 const Nav = styled.div`
   display: flex;
@@ -51,13 +49,15 @@ const Drawer = styled.div`
 `;
 
 const Wrapper = styled.div<ToggleProps>`
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
   background-color: ${(props) => props.theme.colors.black};
   @media (max-width: 939px) {
     position: fixed;
-    justify-content: start;
+    width: 100%;
+  }
+  @media (min-width: 13010px) {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
   }
 `;
 const MenuSharp = styled(IoMenuSharp)`
@@ -72,6 +72,19 @@ const CloseSharp = styled(IoCloseSharp)`
     font-size: 3em;
   }
 `;
+const Logo = styled(Image)``;
+
+const Button = styled.button`
+  border: 1px solid #fff;
+  background: ${(props) => props.theme.colors.black};
+  border-radius: 5px;
+  color: ${(props) => props.theme.colors.white};
+  padding: 10px 24px;
+  @media (max-width: 960) {
+    margin-left: 20px;
+    margin-top: 18px;
+  }
+`;
 
 const Navbar: React.FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -84,7 +97,7 @@ const Navbar: React.FC = () => {
     <Wrapper toggle={toggle}>
       <Nav>
         <WrapperLogo>
-          <Logo />
+          <Logo src={'/logo.svg'} alt="Logo" width={100} height={100} />
         </WrapperLogo>
         <Drawer>
           {toggle === false && <MenuSharp onClick={handleClick} />}
@@ -94,6 +107,9 @@ const Navbar: React.FC = () => {
 
       <ListItems toggle={toggle}>
         <List />
+        <Button>
+          <a href={'/login'}>LOGIN</a>
+        </Button>
       </ListItems>
     </Wrapper>
   );

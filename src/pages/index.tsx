@@ -1,16 +1,13 @@
 import type { NextPage } from 'next';
-
-import Layout from 'src/components/common/Layout';
-import Maintenance from 'src/components/common/Maintenance';
-
-import IndexHead from './IndexHead';
-import image from '../../public/maintenance.png';
+import Layout from '@/components/common/Layout';
+import Header from '@/components/Header/Header';
+import IndexHead from '@/pages/IndexHead';
 
 const IndexPage: NextPage = () => (
   <div>
     <IndexHead />
     <Layout>
-      <Maintenance image={image} />
+      <Header />
     </Layout>
   </div>
 );

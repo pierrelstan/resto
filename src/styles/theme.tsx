@@ -5,6 +5,7 @@ const theme: DefaultTheme = {
     black: '#19161B',
     white: '#fff',
     yellow: '#FFB577',
+    grey: '#919092FF',
   },
 };
 export default theme;

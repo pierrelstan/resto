@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
 import styled from 'styled-components';
-
 import image from '../../public/maintenance.png';
 
 const Container = styled.div`

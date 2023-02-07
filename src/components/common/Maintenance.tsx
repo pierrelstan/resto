@@ -1,5 +1,6 @@
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import styled from 'styled-components';
+import { IImageProps } from '@/utils/types';
 
 const Container = styled.div`
   margin-left: auto;
@@ -12,19 +13,21 @@ const Container = styled.div`
 `;
 const Title = styled.h1`
   font-size: 4em;
+  @media (max-width: 539px) {
+    font-size: 2em;
+  }
 `;
 const Subtitle = styled.h2`
   color: #eee;
   font-size: 2em;
   padding-bottom: 46px;
+  @media (max-width: 539px) {
+    font-size: 2em;
+  }
 }
 `;
 
-export interface IMaintenanceProps {
-  image: StaticImageData;
-}
-
-export default function Maintenance(props: IMaintenanceProps) {
+export default function Maintenance(props: IImageProps) {
   return (
     <Container>
       <Title>Website currently under maintenance</Title>
@@ -34,6 +37,13 @@ export default function Maintenance(props: IMaintenanceProps) {
         width={350}
         height={450}
         alt="image-maintenance"
+        sizes="(max-width: 768px) 10vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+        style={{
+          width: '40%',
+          height: 'auto',
+        }}
       />
     </Container>
   );

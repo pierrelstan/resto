@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-
-import Footer from '../footer/Footer';
-import Header from '../navbar/Navbar';
+import Footer from '@/components/common/footer/Footer';
+import Navbar from '@/components/common/navbar/Navbar';
 
 const Container = styled.div`
   width: 100%;
@@ -13,11 +12,12 @@ const Container = styled.div`
   margin-right: auto;
 `;
 export default function Layout({ children }: any) {
+  const date = new Date().getFullYear();
   return (
     <Container>
-      <Header />
+      <Navbar />
       {children}
-      <Footer />
+      <Footer date={date} />
     </Container>
   );
 }

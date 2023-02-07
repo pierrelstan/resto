@@ -1,11 +1,12 @@
+/* eslint-disable react/jsx-key */
 import React from 'react';
-
 import {
   IoLogoFacebook,
   IoLogoInstagram,
   IoLogoTwitter,
 } from 'react-icons/io5';
 import styled from 'styled-components';
+import { IFooterProps } from '@/utils/types';
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ const Container = styled.div`
 const Title = styled.h5`
   font-size: 18px;
   margin: 9px;
+  font-family: 'Poppins', sans-serif;
 `;
 
 const WrapperIcons = styled.div`
@@ -25,25 +27,25 @@ const WrapperIcons = styled.div`
   flex-direction: row;
   gap: 10px;
 `;
-const Rights = styled.p``;
+const Rights = styled.p`
+  font-family: 'Poppins', sans-serif;
+`;
 const Link = styled.a``;
 
-const Footer: React.FC = () => {
-  const date = new Date().getFullYear();
+const Footer: React.FC<IFooterProps> = ({ date }) => {
+  const icons = [
+    <IoLogoFacebook size={'2em'} />,
+    <IoLogoTwitter size={'2em'} />,
+    <IoLogoInstagram size={'2em'} />,
+  ];
 
   return (
-    <Container>
+    <Container data-cy="footer">
       <Title>Follow us on:</Title>
       <WrapperIcons>
-        <Link>
-          <IoLogoFacebook size={'2em'} />
-        </Link>
-        <Link>
-          <IoLogoTwitter size={'2em'} />
-        </Link>
-        <Link>
-          <IoLogoInstagram size={'2em'} />
-        </Link>
+        {icons.map((icon, i) => (
+          <Link key={i}>{icon}</Link>
+        ))}
       </WrapperIcons>
       <Rights>© {date} YayaResto </Rights>
     </Container>
