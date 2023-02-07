@@ -8,5 +8,8 @@ interface ToggleProps {
 interface IImageProps {
   image: StaticImageData;
 }
+interface IFooterProps {
+  date: number;
+}
 
-export type { ListProps, ToggleProps, IImageProps };
+export type { ListProps, ToggleProps, IImageProps, IFooterProps };
