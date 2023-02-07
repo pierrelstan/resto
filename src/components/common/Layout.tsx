@@ -12,11 +12,12 @@ const Container = styled.div`
   margin-right: auto;
 `;
 export default function Layout({ children }: any) {
+  const date = new Date().getFullYear();
   return (
     <Container>
       <Navbar />
       {children}
-      <Footer />
+      <Footer date={date} />
     </Container>
   );
 }
