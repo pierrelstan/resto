@@ -21,6 +21,6 @@ describe('<Navbar />', () => {
         <Navbar />
       </GlobalTheme>
     );
-    cy.get('li').should('have.length', 7);
+    cy.get('li').should('have.length', 6);
   });
 });
