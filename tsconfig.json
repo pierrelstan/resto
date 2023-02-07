@@ -11,7 +11,8 @@
       "@/components/*": ["src/components/*"],
       "@/utils/*": ["utils/*"],
       "@/styles/*": ["src/styles/*"],
-      "@/pages/*": ["src/pages/*"]
+      "@/pages/*": ["src/pages/*"],
+      "@/public/*": ["public/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
