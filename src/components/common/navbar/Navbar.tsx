@@ -80,7 +80,7 @@ const Button = styled.button`
   border-radius: 5px;
   color: ${(props) => props.theme.colors.white};
   padding: 10px 24px;
-  @media (max-width: 960) {
+  @media (max-width: 960px) {
     margin-left: 20px;
     margin-top: 18px;
   }

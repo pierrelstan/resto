@@ -2,6 +2,7 @@ import { Playfair_Display } from '@next/font/google';
 import type { AppProps } from 'next/app';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
+import Layout from '@/components/common/Layout';
 import store from '../store';
 import GlobalStyle from '../styles/globalstyles';
 import theme from '../styles/theme';
@@ -16,6 +17,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+
         <main className={playfair_Display.className}>
           <Component {...pageProps} />
         </main>
