@@ -19,6 +19,9 @@ const Btn = styled.button`
   margin-top: 20px;
   cursor: pointer;
 `;
+const ButtonImage = styled(Image)`
+  color: ${(props) => props.theme.colors.black};
+`;
 
 interface IButtonProps {
   path: string;
@@ -28,7 +31,12 @@ const Button: React.FC<IButtonProps> = ({ path }) => {
     <Link href={`${path}`}>
       <Btn>
         <div>View Menu</div>
-        <Image src={'/arrow.svg'} alt="icon-arrow" width={30} height={30} />
+        <ButtonImage
+          src={'/btn-arrow.svg'}
+          alt="icon-arrow"
+          width={30}
+          height={30}
+        />
       </Btn>
     </Link>
   );

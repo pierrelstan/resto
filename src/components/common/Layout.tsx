@@ -3,13 +3,11 @@ import Footer from '@/components/common/footer/Footer';
 import Navbar from '@/components/common/navbar/Navbar';
 
 const Container = styled.div`
-  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
+  height: 100vh;
   min-height: 100vh;
-  justify-content: space-between;
-  margin-left: auto;
-  margin-right: auto;
+  color: ${(props) => props.theme.colors.white};
 `;
 export default function Layout({ children }: any) {
   const date = new Date().getFullYear();

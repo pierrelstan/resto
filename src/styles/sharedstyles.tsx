@@ -1,14 +1,25 @@
 import styled from 'styled-components';
+import { ITitleProps } from '@/utils/types';
 
 const Container = styled.div`
-  padding: 0 0.5rem;
   display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 100vh;
-  min-height: 100vh;
+  margin-top: 120px;
+  padding: 0 7.5rem;
+  gap: 55px;
+  @media (max-width: 900px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 147px;
+    padding: 0 1.5rem;
+    gap: 0;
+    padding: 0 1.5rem;
+  }
 `;
+
+const Wrapper = styled.div``;
 const Main = styled.main`
   padding: 5rem 0;
   flex: 1;
@@ -18,21 +29,28 @@ const Main = styled.main`
   align-items: center;
 `;
 
-const Title = styled.h1`
+const Title = styled.h1<ITitleProps>`
+  font-size: ${(props) => props.fontSize}px;
+  color: ${(props) =>
+    props.color === 'white'
+      ? props.theme.colors.white
+      : props.color === 'yellow'
+      ? props.theme.colors.yellow
+      : props.theme.colors.grey};
+  line-height: 110%;
   margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  text-align: center;
-  text-decoration: none;
-  a {
-    color: ${({ theme }) => theme.colors.white};
-    text-decoration: none;
-    &:hover,
-    :focus,
-    :active {
-      text-decoration: underline;
-    }
+  @media (max-width: 920px) {
+    font-size: ${(props) =>
+      props.color === 'yellow' ? `${props.fontSize}px` : '55px'};
   }
+`;
+
+const Text = styled.p`
+  font-size: 18px;
+  margin-right: 20px;
+  font-family: 'Poppins', sans-serif;
+  color: ${(props) => props.theme.colors.grey};
+  line-height: 1.45em;
 `;
 
 const Description = styled.p`
@@ -50,4 +68,4 @@ const CodeTag = styled.code`
     Bitstream Vera Sans Mono, Courier New, monospace;
 `;
 
-export { Container, Main, Title, Description, CodeTag };
+export { Container, Main, Title, Text, Description, CodeTag, Wrapper };
