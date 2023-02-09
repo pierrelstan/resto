@@ -9,7 +9,8 @@ const Container = styled.div`
   margin-top: 120px;
   padding: 0 7.5rem;
   gap: 55px;
-  @media (max-width: 900px) {
+
+  @media (max-width: 820px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -59,7 +60,6 @@ const Title = styled.h1<ITitleProps>`
 
 const Text = styled.p`
   font-size: 18px;
-  margin-right: 20px;
   font-family: 'Poppins', sans-serif;
   color: ${(props) => props.theme.colors.grey};
   line-height: 1.45em;

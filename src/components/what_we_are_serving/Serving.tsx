@@ -7,18 +7,29 @@ const Columns = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  height: 100vh;
+  @media (max-width: 900px) {
+    flex-direction: column;
+    margin: 20px;
+  }
+  @media (max-width: 439px) {
+    margin: 20px;
+    height: auto;
+  }
 `;
 const Column = styled.div`
   flex: 33.33%;
-  padding: 20px;
+  padding: 30px;
+  @media (max-width: 920px) {
+    padding: 0;
+  }
 `;
 const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 7.45rem;
-
+  width: 100%;
   background: ${({ theme }) => theme.colors.black};
+  @media (max-width: 430px) {
+    background: none;
+  }
 `;
 const Serving: React.FC = () => {
   return (
