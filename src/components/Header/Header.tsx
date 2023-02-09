@@ -54,8 +54,8 @@ const Header: React.FC = () => {
         <HeaderImage
           src={'/hero.png'}
           alt="hero-image"
-          width={320}
-          height={420}
+          width={220}
+          height={320}
           sizes="100vh"
         />
       </WrapperImage>

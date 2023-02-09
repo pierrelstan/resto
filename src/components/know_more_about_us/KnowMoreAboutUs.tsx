@@ -9,7 +9,7 @@ import Titles from '../common/Titles';
 
 const WrapperImages = styled.div`
   display: flex;
-  @media (max-width: 920px) {
+  @media (max-width: 995px) {
     flex-wrap: wrap;
     justify-content: center;
   }

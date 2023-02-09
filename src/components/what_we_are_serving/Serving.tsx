@@ -7,14 +7,8 @@ const Columns = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  height: 100vh;
-  @media (max-width: 900px) {
+  @media (max-width: 675px) {
     flex-direction: column;
-    margin: 20px;
-  }
-  @media (max-width: 439px) {
-    margin: 20px;
-    height: auto;
   }
 `;
 const Column = styled.div`

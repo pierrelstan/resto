@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
+import Footer from '@/components/common/footer/Footer';
 import Layout from '@/components/common/Layout';
+import Navbar from '@/components/common/navbar/Navbar';
 import Header from '@/components/Header/Header';
 import KnowMoreAboutUs from '@/components/know_more_about_us/KnowMoreAboutUs';
 import WhatWeAreServing from '@/components/what_we_are_serving/WhatWeAreServing';

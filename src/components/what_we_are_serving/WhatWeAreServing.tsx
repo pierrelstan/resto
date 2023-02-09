@@ -5,15 +5,12 @@ import Description from '../common/Description';
 import Titles from '../common/Titles';
 
 const SContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  padding: 0 7.45rem;
-  align-items: center;
-  margin-top: 120px;
-  margin-bottom: 20px;
-  @media (max-width: 920px) {
+  @media (min-width: 820px) {
     display: flex;
-    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 20px;
   }
 `;
 const Container = styled.div``;
@@ -41,9 +38,7 @@ const WhatWeAreServing: React.FC = () => {
           }
         />
       </SContainer>
-      <SContainer>
-        <Serving />
-      </SContainer>
+      <Serving />
     </Container>
   );
 };

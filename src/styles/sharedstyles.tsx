@@ -7,17 +7,20 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-top: 120px;
-  padding: 0 7.5rem;
   gap: 55px;
-
-  @media (max-width: 820px) {
+  @media (max-width: 920px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 147px;
-    padding: 0 1.5rem;
     gap: 0;
-    padding: 0 1.5rem;
+  }
+  @media (max-width: 966px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 147px;
+    gap: 55px;
   }
 `;
 
