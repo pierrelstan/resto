@@ -19,14 +19,7 @@ const Container = styled.div`
     padding: 0 1.5rem;
   }
 `;
-const Responsive = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  @media (max-width: 1000px) {
-    flex-wrap: wrap;
-  }
-`;
+
 const Wrapper = styled.div``;
 const Main = styled.main`
   padding: 5rem 0;
@@ -91,5 +84,4 @@ export {
   Wrapper,
   WrapperTitle,
   TitleImage,
-  Responsive,
 };
