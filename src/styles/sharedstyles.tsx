@@ -34,6 +34,7 @@ const WrapperTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 40px;
+  margin-bottom: 10px;
 `;
 
 const Title = styled.h1<ITitleProps>`
