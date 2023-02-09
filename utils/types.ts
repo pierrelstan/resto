@@ -24,7 +24,11 @@ interface IFeaturesProps {
   sizes: string;
   title: string;
 }
-
+interface ITitlesProps {
+  fontSize: string;
+  color: string;
+  title: string;
+}
 export type {
   ListProps,
   ToggleProps,
@@ -32,4 +36,5 @@ export type {
   IFooterProps,
   ITitleProps,
   IFeaturesProps,
+  ITitlesProps,
 };

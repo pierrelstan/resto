@@ -9,12 +9,20 @@ const Container = styled.div`
   min-height: 100vh;
   color: ${(props) => props.theme.colors.white};
 `;
+const InnerLayout = styled.div`
+  padding: 0 2.45rem;
+
+  @media (min-width: 1320px) {
+    padding: 0 7.45rem;
+    width: 100%;
+  }
+`;
 export default function Layout({ children }: any) {
   const date = new Date().getFullYear();
   return (
     <Container>
       <Navbar />
-      {children}
+      <InnerLayout>{children}</InnerLayout>
       <Footer date={date} />
     </Container>
   );

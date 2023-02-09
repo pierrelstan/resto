@@ -10,7 +10,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.black};
+  background-color: ${(props) => props.theme.colors.blackLight};
   color: ${(props) => props.theme.colors.white};
   padding: 10px;
   @media (max-width: 939px) {
@@ -49,7 +49,7 @@ const Drawer = styled.div`
 `;
 
 const Wrapper = styled.div<ToggleProps>`
-  background-color: ${(props) => props.theme.colors.black};
+  background-color: ${(props) => props.theme.colors.blackLight};
   @media (max-width: 939px) {
     position: fixed;
     width: 100%;
@@ -76,7 +76,7 @@ const Logo = styled(Image)``;
 
 const Button = styled.button`
   border: 1px solid #fff;
-  background: ${(props) => props.theme.colors.black};
+  background: ${(props) => props.theme.colors.blackLight};
   border-radius: 5px;
   color: ${(props) => props.theme.colors.white};
   padding: 10px 24px;

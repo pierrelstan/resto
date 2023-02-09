@@ -1,20 +1,15 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Container, Text, Title, Wrapper } from '@/styles/sharedstyles';
+import { Container, Wrapper } from '@/styles/sharedstyles';
 import { data, featuresImage } from '@/utils/data';
 import { IFeaturesProps } from '@/utils/types';
 import Button from '../common/Button';
-
-const WrapperTitle = styled.div`
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  gap: 40px;
-`;
+import Description from '../common/Description';
+import Titles from '../common/Titles';
 
 const WrapperImages = styled.div`
   display: flex;
-  @media (max-width: 920px) {
+  @media (max-width: 995px) {
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -41,7 +36,6 @@ const Img = styled(Image)<IFeaturesProps>`
   }
 `;
 
-const TitleImage = styled(Image)``;
 const Features = styled.div`
   display: flex;
   font-family: 'Poppins', sans-serif;
@@ -77,25 +71,17 @@ const KnowMoreAboutUs: React.FC = () => {
   return (
     <Container>
       <Wrapper>
-        <WrapperTitle>
-          <Title fontSize={'18'} color={'yellow'}>
-            know more about us
-          </Title>
-          <TitleImage
-            src={'/line.svg'}
-            alt={'arrow-title'}
-            width={50}
-            height={50}
-          />
-        </WrapperTitle>
-        <Title fontSize={'70'} color={'white'} data-cy="moreAboutUs">
-          We source sustainable & line caught Foods
-        </Title>
-        <Text>
-          Edit this text to make it your own. To edit, simply click directly on
-          the text to start adding your own words. You can move the text by
-          dragging and dropping the text anywhere on the page.
-        </Text>
+        <Titles fontSize={'18'} color={'yellow'} title={'know more about us'} />
+        <Titles
+          fontSize={'70'}
+          color={'white'}
+          title={'We source sustainable & line caught Foods'}
+        />
+        <Description
+          description={
+            '  Edit this text to make it your own. To edit, simply click directly on the text to start adding your own words. You can move the text by dragging and dropping the text anywhere on the page.'
+          }
+        />
         <Features>
           {data.map((element, i) => (
             <FWrapper key={i}>
