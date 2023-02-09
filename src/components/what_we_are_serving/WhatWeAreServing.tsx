@@ -21,6 +21,7 @@ const SContainer = styled.div`
 const Responsive = styled.div`
   display: flex;
   justify-content: center;
+  flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
   @media (max-width: 1000px) {
