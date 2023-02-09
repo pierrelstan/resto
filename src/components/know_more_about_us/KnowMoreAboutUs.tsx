@@ -75,7 +75,6 @@ const KnowMoreAboutUs: React.FC = () => {
         <Titles
           fontSize={'70'}
           color={'white'}
-          data-cy="moreAboutUs"
           title={'We source sustainable & line caught Foods'}
         />
         <Description
