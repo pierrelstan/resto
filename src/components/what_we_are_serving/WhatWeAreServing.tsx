@@ -1,12 +1,5 @@
 import styled from 'styled-components';
-import {
-  Responsive,
-  Text,
-  Title,
-  TitleImage,
-  Wrapper,
-  WrapperTitle,
-} from '@/styles/sharedstyles';
+import { Responsive, Wrapper } from '@/styles/sharedstyles';
 import Serving from './Serving';
 import Description from '../common/Description';
 import Titles from '../common/Titles';
