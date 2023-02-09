@@ -4,28 +4,9 @@ import Serving from './Serving';
 import Description from '../common/Description';
 import Titles from '../common/Titles';
 
-const SContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 120px;
-  gap: 55px;
-`;
-const Responsive = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 20px;
-  @media (min-width: 820px) {
-    flex-wrap: wrap;
-  }
-`;
-
 const WhatWeAreServing: React.FC = () => {
   return (
-    <SContainer>
+    <div>
       <Container>
         <Wrapper>
           <Titles
@@ -48,7 +29,7 @@ const WhatWeAreServing: React.FC = () => {
       </Container>
 
       <Serving />
-    </SContainer>
+    </div>
   );
 };
 
