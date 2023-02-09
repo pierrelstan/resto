@@ -22,5 +22,42 @@ const data = [
   },
 ];
 const featuresImage = ['/image1.svg', '/image2.svg'];
-
-export { data, featuresImage };
+const servingData = [
+  {
+    title: 'Quafe Cake',
+    icon: '/icon(1).svg',
+    description:
+      'Through True Rich Attended no end it his mother since favourable real had half every him.',
+  },
+  {
+    title: 'Coffee',
+    icon: '/icon(6).svg',
+    description:
+      'Through True Rich Attended no end it his mother since favourable real had half every him.',
+  },
+  {
+    title: 'Fast food',
+    icon: '/icon(2).svg',
+    description:
+      'Through True Rich Attended no end it his mother since favourable real had half every him.',
+  },
+  {
+    title: 'Cocktails',
+    icon: '/icon(3).svg',
+    description:
+      'Through True Rich Attended no end it his mother since favourable real had half every him.',
+  },
+  {
+    title: 'Grill',
+    icon: '/icon(4).svg',
+    description:
+      'Through True Rich Attended no end it his mother since favourable real had half every him.',
+  },
+  {
+    title: 'Snacks',
+    icon: '/icon(5).svg',
+    description:
+      'Through True Rich Attended no end it his mother since favourable real had half every him.',
+  },
+];
+export { data, featuresImage, servingData };

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styled from 'styled-components';
 import { ITitleProps } from '@/utils/types';
 
@@ -18,7 +19,14 @@ const Container = styled.div`
     padding: 0 1.5rem;
   }
 `;
-
+const Responsive = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 900px) {
+    flex-wrap: wrap;
+  }
+`;
 const Wrapper = styled.div``;
 const Main = styled.main`
   padding: 5rem 0;
@@ -29,6 +37,12 @@ const Main = styled.main`
   align-items: center;
 `;
 
+const WrapperTitle = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 40px;
+`;
+
 const Title = styled.h1<ITitleProps>`
   font-size: ${(props) => props.fontSize}px;
   color: ${(props) =>
@@ -37,11 +51,15 @@ const Title = styled.h1<ITitleProps>`
       : props.color === 'yellow'
       ? props.theme.colors.yellow
       : props.theme.colors.grey};
+  text-transform: ${(props) =>
+    props.color === 'yellow' ? 'uppercase' : 'none'};
   line-height: 110%;
   margin: 0;
   @media (max-width: 920px) {
     font-size: ${(props) =>
       props.color === 'yellow' ? `${props.fontSize}px` : '55px'};
+    text-transform: ${(props) =>
+      props.color === 'yellow' ? 'uppercase' : 'none'};
   }
 `;
 
@@ -53,11 +71,6 @@ const Text = styled.p`
   line-height: 1.45em;
 `;
 
-const Description = styled.p`
-  text-align: center;
-  line-height: 1.5;
-  font-size: 1.5rem;
-`;
 const CodeTag = styled.code`
   background: #fafafa;
   border-radius: 5px;
@@ -67,5 +80,16 @@ const CodeTag = styled.code`
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 `;
+const TitleImage = styled(Image)``;
 
-export { Container, Main, Title, Text, Description, CodeTag, Wrapper };
+export {
+  Container,
+  Main,
+  Title,
+  Text,
+  CodeTag,
+  Wrapper,
+  WrapperTitle,
+  TitleImage,
+  Responsive,
+};
