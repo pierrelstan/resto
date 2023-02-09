@@ -18,7 +18,7 @@ const Responsive = styled.div`
   flex-direction: row;
   align-items: center;
   margin-bottom: 20px;
-  @media (max-width: 820px) {
+  @media (min-width: 820px) {
     flex-wrap: wrap;
   }
 `;
@@ -27,26 +27,24 @@ const WhatWeAreServing: React.FC = () => {
   return (
     <SContainer>
       <Container>
-        <Responsive>
-          <Wrapper>
-            <Titles
-              fontSize={'18'}
-              color={'yellow'}
-              title={'what we are serving'}
-            />
-
-            <Titles
-              fontSize="70"
-              color={'white'}
-              title={'We all have to eat, so Why not do it beautifully?'}
-            />
-          </Wrapper>
-          <Description
-            description={
-              ' Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother'
-            }
+        <Wrapper>
+          <Titles
+            fontSize={'18'}
+            color={'yellow'}
+            title={'what we are serving'}
           />
-        </Responsive>
+
+          <Titles
+            fontSize="70"
+            color={'white'}
+            title={'We all have to eat, so Why not do it beautifully?'}
+          />
+        </Wrapper>
+        <Description
+          description={
+            ' Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother'
+          }
+        />
       </Container>
 
       <Serving />
