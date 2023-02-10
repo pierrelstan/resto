@@ -14,6 +14,7 @@ const CardTitle = styled.h1`
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
   @media (min-width: 600px) {
+    font-size: 18px;
   }
 `;
 
