@@ -48,6 +48,8 @@ const Title = styled.h1<ITitleProps>`
       ? props.theme.colors.white
       : props.color === 'yellow'
       ? props.theme.colors.yellow
+      : props.color === 'cyan'
+      ? props.theme.colors.cyan
       : props.theme.colors.grey};
   text-transform: ${(props) =>
     props.color === 'yellow' ? 'uppercase' : 'none'};
@@ -79,6 +81,20 @@ const CodeTag = styled.code`
 `;
 const TitleImage = styled(Image)``;
 
+const Columns = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+`;
+const Column = styled.div`
+  padding: 1rem;
+  height: auto;
+`;
+
 export {
   Container,
   Main,
@@ -88,4 +104,6 @@ export {
   Wrapper,
   WrapperTitle,
   TitleImage,
+  Columns,
+  Column,
 };

@@ -1,23 +1,8 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Text } from '@/styles/sharedstyles';
+import { Column, Columns, Text } from '@/styles/sharedstyles';
 import { servingData } from '@/utils/data';
 
-const Columns = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  @media (max-width: 675px) {
-    flex-direction: column;
-  }
-`;
-const Column = styled.div`
-  flex: 33.33%;
-  padding: 30px;
-  @media (max-width: 920px) {
-    padding: 0;
-  }
-`;
 const Container = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.colors.black};

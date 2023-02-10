@@ -104,7 +104,7 @@ const KnowMoreAboutUs: React.FC = () => {
       </Wrapper>
       <WrapperImages>
         {featuresImage.map((image, i) => (
-          <>
+          <span key={i}>
             <Img
               src={image}
               alt="know_more_about_us_image"
@@ -112,9 +112,8 @@ const KnowMoreAboutUs: React.FC = () => {
               height={500}
               sizes="100vh"
               title={`${image}-${i}`}
-              key={i}
             />
-          </>
+          </span>
         ))}
       </WrapperImages>
     </Container>
