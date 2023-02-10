@@ -2,10 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Wrapper } from '@/styles/sharedstyles';
 import { Menu } from './Menu';
+import Button from '../common/Button';
 import Description from '../common/Description';
 import Titles from '../common/Titles';
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+`;
 
 const MContainer = styled.div`
   @media (min-width: 820px) {
@@ -49,6 +54,7 @@ const OurMenu = (props: IOurMenuProps) => {
         />
       </MContainer>
       <Menu />
+      <Button path={'/view-menu'} />
     </Container>
   );
 };
