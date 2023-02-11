@@ -12,7 +12,9 @@ const Info = styled.div`
   margin-top: 60px;
 `;
 const HeaderImage = styled(Image)`
-  @media (min-width: 1024px) {
+  width: 700px;
+  height: auto;
+  @media (max-width: 900px) {
     width: 100%;
     height: auto;
   }

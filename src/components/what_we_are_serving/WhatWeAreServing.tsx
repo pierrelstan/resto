@@ -1,24 +1,12 @@
-import styled from 'styled-components';
-import { Wrapper } from '@/styles/sharedstyles';
+import { CustomContainer, Wrapper } from '@/styles/sharedstyles';
 import Serving from './Serving';
 import Description from '../common/Description';
 import Titles from '../common/Titles';
 
-const SContainer = styled.div`
-  @media (min-width: 820px) {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 120px;
-    margin-bottom: 20px;
-  }
-`;
-const Container = styled.div``;
-
 const WhatWeAreServing: React.FC = () => {
   return (
-    <Container>
-      <SContainer>
+    <Wrapper>
+      <CustomContainer>
         <Wrapper>
           <Titles
             fontSize={'18'}
@@ -37,9 +25,9 @@ const WhatWeAreServing: React.FC = () => {
             ' Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother'
           }
         />
-      </SContainer>
+      </CustomContainer>
       <Serving />
-    </Container>
+    </Wrapper>
   );
 };
 

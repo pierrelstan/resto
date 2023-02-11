@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Wrapper } from '@/styles/sharedstyles';
+import { CustomContainer, Wrapper } from '@/styles/sharedstyles';
 import { Menu } from './Menu';
 import Button from '../common/Button';
 import Description from '../common/Description';
@@ -12,15 +12,6 @@ const Container = styled.div`
   flex-flow: column nowrap;
 `;
 
-const MContainer = styled.div`
-  @media (min-width: 820px) {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 120px;
-    margin-bottom: 20px;
-  }
-`;
 const Div = styled.div`
   margin-top: 40px;
 `;
@@ -30,7 +21,7 @@ type IOurMenuProps = {};
 const OurMenu = (props: IOurMenuProps) => {
   return (
     <Container>
-      <MContainer>
+      <CustomContainer>
         <Wrapper>
           <Titles fontSize={'18'} color={'yellow'} title={'our menu'} />
 
@@ -52,7 +43,7 @@ const OurMenu = (props: IOurMenuProps) => {
             ' Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother'
           }
         />
-      </MContainer>
+      </CustomContainer>
       <Menu />
       <Button path={'/view-menu'} />
     </Container>

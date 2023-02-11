@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Text } from '@/styles/sharedstyles';
 import Address from '../common/Address';
-import Titles from '../common/Titles';
 
 const Container = styled.div`
   margin: 0 0 auto;
@@ -32,23 +30,6 @@ const Img = styled(Image)`
 type Props = {};
 
 const Map = (props: Props) => {
-  const address = [
-    {
-      title: 'Working Hour',
-      description: 'Sunday to Saturday',
-      info: '09:00 AM to 11:00 PM',
-    },
-    {
-      title: 'Location',
-      description: 'Street - 127, New York, United States',
-      info: '546544',
-    },
-    {
-      title: 'Contact us',
-      description: '+123456789',
-      info: 'hey@yourdomain.com',
-    },
-  ];
   return (
     <Container>
       <Wrapper>
