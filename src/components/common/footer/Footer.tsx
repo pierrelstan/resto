@@ -12,9 +12,11 @@ const Container = styled.div`
   display: flex;
   justify-content: end;
   flex-direction: column;
+  margin-top: 30px;
   align-items: center;
   height: 300px;
   color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.black};
 `;
 const Title = styled.h5`
   font-size: 18px;
