@@ -1,11 +1,10 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Container, Wrapper } from '@/styles/sharedstyles';
-import { data, featuresImage } from '@/utils/data';
+import { data } from '@/utils/data';
 import { IFeaturesProps } from '@/utils/types';
+import Article1 from '../common/Article1';
 import Button from '../common/Button';
-import Description from '../common/Description';
-import Titles from '../common/Titles';
 
 const WrapperImages = styled.div`
   display: flex;
@@ -71,19 +70,9 @@ const KnowMoreAboutUs: React.FC = () => {
   return (
     <Container>
       <Wrapper>
-        <Titles fontSize={'18'} color={'yellow'} title={'know more about us'} />
-        <Titles
-          fontSize={'70'}
-          color={'white'}
-          title={'We source sustainable & line caught Foods'}
-        />
-        <Description
-          description={
-            '  Edit this text to make it your own. To edit, simply click directly on the text to start adding your own words. You can move the text by dragging and dropping the text anywhere on the page.'
-          }
-        />
+        <Article1 data={data['two']} />
         <Features>
-          {data.map((element, i) => (
+          {data['data'].map((element, i) => (
             <FWrapper key={i}>
               <FTitle>
                 <FImg
@@ -103,7 +92,7 @@ const KnowMoreAboutUs: React.FC = () => {
         <Button path={'view-menu'} />
       </Wrapper>
       <WrapperImages>
-        {featuresImage.map((image, i) => (
+        {data['featuresImage'].map((image, i) => (
           <span key={i}>
             <Img
               src={image}

@@ -29,6 +29,27 @@ interface ITitlesProps {
   color: string;
   title: string;
 }
+type AObj = {
+  fontSize: string;
+  color: string;
+  title: string;
+  description: string;
+  subTitle: boolean;
+};
+
+type AProps = {
+  data: Array<AObj>;
+};
+
+type OurMenuObj = {
+  image: string | StaticImageData;
+  title: string;
+  price: string;
+};
+type MenuProps = {
+  data: Array<OurMenuObj>;
+};
+
 export type {
   ListProps,
   ToggleProps,
@@ -37,4 +58,6 @@ export type {
   ITitleProps,
   IFeaturesProps,
   ITitlesProps,
+  AProps,
+  MenuProps,
 };

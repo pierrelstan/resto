@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Column, Columns } from '@/styles/sharedstyles';
-import { ourMenu } from '@/utils/data';
+import { MenuProps } from '@/utils/types';
 
 const Container = styled.div``;
 
@@ -26,13 +26,12 @@ const CardWrapper = styled.div`
   padding: 0;
 `;
 
-export interface IMenuProps {}
-
-export const Menu: React.FC = (props: IMenuProps) => {
+export const Menu: React.FC<MenuProps> = (props: MenuProps) => {
+  console.log(props);
   return (
     <Container>
       <Columns>
-        {ourMenu.map((menu, i) => (
+        {props.data.map((menu, i) => (
           <Column key={i}>
             <ImageCard
               src={menu.image}

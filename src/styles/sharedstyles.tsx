@@ -7,8 +7,11 @@ const Container = styled.div`
   gap: 55px;
   justify-content: center;
   margin-top: 120px;
-  @media (min-width: 600px) {
+  grid-template-columns: repeat(1, 1fr);
+  @media (min-width: 850px) {
     grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    height: 100vh;
   }
 
   @media (max-width: 920px) {
@@ -22,7 +25,6 @@ const Main = styled.main`
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 `;
 
@@ -82,15 +84,25 @@ const Column = styled.div`
   height: auto;
 `;
 const CustomContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-bottom: 20px;
+  display: grid;
+  gap: 5px;
+  max-width;1200px;
+  justify-content: center;
   margin-top: 120px;
-  @media (max-width: 820px) {
-    flex-wrap: wrap;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(1, 1fr);
+`;
+const AContainer = styled.div`
+  display: grid;
+  align-items: center;
+  margin-top: 120px;
+  margin-bottom: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  @media (min-width: 820px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
+
 export {
   Container,
   Main,
@@ -102,4 +114,5 @@ export {
   Columns,
   Column,
   CustomContainer,
+  AContainer,
 };
