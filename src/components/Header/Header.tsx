@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Container, Wrapper } from '@/styles/sharedstyles';
+import Address from '../common/Address';
 import Button from '../common/Button';
 import Description from '../common/Description';
 import Titles from '../common/Titles';
 
 const WrapperImage = styled.div``;
 
-const Contact = styled.div`
-  margin-top: 40px;
+const Info = styled.div`
+  margin-top: 60px;
 `;
 const HeaderImage = styled(Image)`
   @media (min-width: 1024px) {
@@ -33,22 +34,9 @@ const Header: React.FC = () => {
         />
 
         <Button path={'/view-menu'} />
-        <Contact>
-          <div>
-            <h2>Openings time</h2>
-            <Description
-              description={'Sunday to Friday | 9:00 AM to 11:00 PM'}
-            />
-          </div>
-          <div>
-            <h2>Location</h2>
-            <Description description={'New York ,BBRS,332277'} />
-          </div>
-          <div>
-            <h2>Call us</h2>
-            <Description description={'+123332445'} />
-          </div>
-        </Contact>
+        <Info>
+          <Address />
+        </Info>
       </Wrapper>
       <WrapperImage>
         <HeaderImage
