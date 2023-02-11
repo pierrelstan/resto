@@ -18,6 +18,11 @@ const Btn = styled.button`
   font-family: 'Poppins', sans-serif;
   margin-top: 20px;
   cursor: pointer;
+
+  @media (max-width: 500px) {
+    padding: 12px 19px;
+    gap: 7px;
+  }
 `;
 const ButtonImage = styled(Image)`
   color: ${(props) => props.theme.colors.black};

@@ -3,24 +3,16 @@ import styled from 'styled-components';
 import { ITitleProps } from '@/utils/types';
 
 const Container = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 120px;
+  display: grid;
   gap: 55px;
-  @media (max-width: 920px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 147px;
-    gap: 0;
+  justify-content: center;
+  margin-top: 120px;
+  @media (min-width: 600px) {
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 966px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+  @media (max-width: 920px) {
     margin-top: 147px;
-    gap: 55px;
   }
 `;
 
@@ -37,8 +29,12 @@ const Main = styled.main`
 const WrapperTitle = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 5px;
   margin-bottom: 10px;
+
+  @media (min-width: 600px) {
+    gap: 10px;
+  }
 `;
 
 const Title = styled.h1<ITitleProps>`
@@ -85,7 +81,16 @@ const Column = styled.div`
   padding: 1rem;
   height: auto;
 `;
-
+const CustomContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 120px;
+  @media (max-width: 820px) {
+    flex-wrap: wrap;
+  }
+`;
 export {
   Container,
   Main,
@@ -96,4 +101,5 @@ export {
   TitleImage,
   Columns,
   Column,
+  CustomContainer,
 };
