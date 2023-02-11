@@ -95,4 +95,22 @@ const ourMenu = [
     image: '/Image (5).svg',
   },
 ];
-export { data, featuresImage, servingData, ourMenu };
+
+const address = [
+  {
+    title: 'Openings time',
+    description: 'Sunday to Saturday',
+    info: '09:00 AM to 11:00 PM',
+  },
+  {
+    title: 'Location',
+    description: 'Street - 127, New York, United States',
+    info: '546544',
+  },
+  {
+    title: 'Contact us',
+    description: '+123456789',
+    info: 'hey@yourdomain.com',
+  },
+];
+export { data, featuresImage, servingData, ourMenu, address };
