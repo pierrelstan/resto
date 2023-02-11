@@ -2,7 +2,7 @@ import React from 'react';
 import { GlobalTheme } from '@/components/common/navbar/Navbar.cy';
 import Titles from '../common/Titles';
 
-describe('<KnowMoreAboutUs/>', () => {
+describe('<OurMenu/>', () => {
   it('renders', () => {
     // see: https://on.cypress.io/mounting-react
     cy.mount(

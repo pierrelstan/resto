@@ -57,7 +57,7 @@ const Title = styled.h1<ITitleProps>`
   margin: 0;
   @media (max-width: 920px) {
     font-size: ${(props) =>
-      props.color === 'yellow' ? `${props.fontSize}px` : '55px'};
+      props.color === 'yellow' ? `${props.fontSize}px` : '32px'};
     text-transform: ${(props) =>
       props.color === 'yellow' ? 'uppercase' : 'none'};
   }
@@ -70,15 +70,6 @@ const Text = styled.p`
   line-height: 1.45em;
 `;
 
-const CodeTag = styled.code`
-  background: #fafafa;
-  border-radius: 5px;
-  margin: 0 0.75rem;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-`;
 const TitleImage = styled(Image)``;
 
 const Columns = styled.div`
@@ -100,7 +91,6 @@ export {
   Main,
   Title,
   Text,
-  CodeTag,
   Wrapper,
   WrapperTitle,
   TitleImage,
