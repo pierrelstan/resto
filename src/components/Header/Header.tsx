@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 import { Container, Wrapper } from '@/styles/sharedstyles';
+import { data } from '@/utils/data';
 import Address from '../common/Address';
+import Article1 from '../common/Article1';
 import Button from '../common/Button';
-import Description from '../common/Description';
-import Titles from '../common/Titles';
 
 const WrapperImage = styled.div``;
 
@@ -12,28 +12,14 @@ const Info = styled.div`
   margin-top: 60px;
 `;
 const HeaderImage = styled(Image)`
-  width: 700px;
+  width: 100%;
   height: auto;
-  @media (max-width: 900px) {
-    width: 100%;
-    height: auto;
-  }
 `;
 const Header: React.FC = () => {
   return (
     <Container>
       <Wrapper>
-        <Titles
-          fontSize={'70'}
-          color={'white'}
-          title={'We serve high quality foods of all kinds.'}
-        />
-
-        <Description
-          description={
-            'Through True Rich Attended does no end it his mother sincefavourablereal had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother'
-          }
-        />
+        <Article1 data={data['one']} />
 
         <Button path={'/view-menu'} />
         <Info>
