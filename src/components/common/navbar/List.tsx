@@ -17,12 +17,12 @@ const NextLink = styled(Link)<ListProps>`
 `;
 
 const List: React.FC = () => {
-  const array = ['Home', 'Menu', 'About us', 'Our Story', 'Blog', 'Contact'];
+  const array = ['home', 'menu', 'about us', 'our story', 'contact'];
   return (
     <>
       {array.map((list, i) => (
         <ListItem key={i}>
-          <NextLink href={`${list}`} list={list}>
+          <NextLink href={`${list === 'home' ? '/' : list}`} list={list}>
             {list !== 'Login' && list.toUpperCase()}
           </NextLink>
         </ListItem>
