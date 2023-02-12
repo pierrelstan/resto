@@ -89,7 +89,7 @@ const KnowMoreAboutUs: React.FC = () => {
             </FWrapper>
           ))}
         </Features>
-        <Button path={'view-menu'} />
+        <Button path={'menu'} title={'View Menu'} />
       </Wrapper>
       <WrapperImages>
         {data['featuresImage'].map((image, i) => (

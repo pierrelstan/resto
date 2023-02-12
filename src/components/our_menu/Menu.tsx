@@ -27,24 +27,27 @@ const CardWrapper = styled.div`
 `;
 
 export const Menu: React.FC<MenuProps> = (props: MenuProps) => {
-  console.log(props);
+  if (!props.data) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <Container>
       <Columns>
-        {props.data.map((menu, i) => (
-          <Column key={i}>
-            <ImageCard
-              src={menu.image}
-              alt="card-image"
-              width={200}
-              height={200}
-            />
-            <CardWrapper>
-              <CardTitle>{menu.title}</CardTitle>
-              <CardTitle>$ {menu.price}</CardTitle>
-            </CardWrapper>
-          </Column>
-        ))}
+        {props.data &&
+          props.data.map((menu, i) => (
+            <Column key={i}>
+              <ImageCard
+                src={menu.image}
+                alt="card-image"
+                width={200}
+                height={200}
+              />
+              <CardWrapper>
+                <CardTitle>{menu.title}</CardTitle>
+                <CardTitle>$ {menu.price}</CardTitle>
+              </CardWrapper>
+            </Column>
+          ))}
       </Columns>
     </Container>
   );

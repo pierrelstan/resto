@@ -30,12 +30,13 @@ const ButtonImage = styled(Image)`
 
 interface IButtonProps {
   path: string;
+  title: string;
 }
-const Button: React.FC<IButtonProps> = ({ path }) => {
+const Button: React.FC<IButtonProps> = ({ path, title }) => {
   return (
-    <Link href={`${path}`}>
+    <Link href={`/${path}`}>
       <Btn>
-        <div>View Menu</div>
+        <div>{title}</div>
         <ButtonImage
           src={'/btn-arrow.svg'}
           alt="icon-arrow"

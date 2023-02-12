@@ -17,6 +17,16 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+  #nprogress .bar {
+    background: #FFB577;
+   }
+  #nprogress .spinner-icon {
+
+    border-top-color: #FFB577;
+      border-left-color: #FFB577;
+
+    }
+
 `;
 
 export default GlobalStyle;
