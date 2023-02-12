@@ -21,7 +21,7 @@ const Header: React.FC = () => {
       <Wrapper>
         <Article1 data={data['one']} />
 
-        <Button path={'/view-menu'} />
+        <Button path={'menu'} title={'View Menu'} />
         <Info>
           <Address />
         </Info>

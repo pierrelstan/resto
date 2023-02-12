@@ -17,9 +17,8 @@ const OurMenu = () => {
       <Article2 data={data['four']} />
 
       <Menu data={data['ourMenu']} />
-      <Button path={'/view-menu'} />
+      <Button path={'menu'} title={'View More'} />
     </Container>
   );
 };
 export default OurMenu;
-
