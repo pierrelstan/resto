@@ -6,13 +6,14 @@ import Map from '@/components/Map/Map';
 import OurMenu from '@/components/our_menu/OurMenu';
 import WhatWeAreServing from '@/components/what_we_are_serving/WhatWeAreServing';
 import IndexHead from '@/pages/IndexHead';
+import { data } from '@/utils/data';
 
 const IndexPage: NextPage = () => (
   <div>
     <IndexHead />
     <Layout>
       <Header />
-      <KnowMoreAboutUs />
+      <KnowMoreAboutUs data={data['featuresImage']} />
       <WhatWeAreServing />
       <OurMenu />
       <Map />

@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Container, Wrapper } from '@/styles/sharedstyles';
+import { Section, Wrapper } from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
 import { IFeaturesProps } from '@/utils/types';
 import Article1 from '../common/Article1';
 import Button from '../common/Button';
+import CustomImage from '../common/CustomImage';
 
-const WrapperImages = styled.div`
+export const WrapperImages = styled.div`
   display: flex;
   @media (max-width: 995px) {
     flex-wrap: wrap;
@@ -18,9 +19,9 @@ const WrapperImages = styled.div`
   }
 `;
 
-const Img = styled(Image)<IFeaturesProps>`
+export const Img = styled(Image)<IFeaturesProps>`
   display: flex;
-  margin-top: ${(props) => (props.title === '/image1.svg-0' ? '130px' : '0')};
+  margin-top: ${(props) => (props.title === '0' ? '130px' : '0')};
   margin-right: 50px;
 
   @media (max-width: 1021px) {
@@ -35,77 +36,52 @@ const Img = styled(Image)<IFeaturesProps>`
   }
 `;
 
-const Features = styled.div`
+export const Features = styled.div`
   display: flex;
   font-family: 'Poppins', sans-serif;
   @media (max-width: 1360px) {
     flex-wrap: wrap;
   }
 `;
-const FTitle = styled.h1`
+export const FTitle = styled.h1`
   color: ${(props) => props.theme.colors.cyan};
   font-size: 32px;
 `;
-const FDescription = styled.p`
+export const FDescription = styled.p`
   color: ${(props) => props.theme.colors.grey};
   font-size: 18px;
 
   line-height: 1.45em;
 `;
-const FSubTitle = styled.span`
+export const FSubTitle = styled.span`
   color: ${(props) => props.theme.colors.grey};
   font-size: 18px;
 `;
-const FWrapper = styled.div`
+export const FWrapper = styled.div`
   width: 264px;
   padding-right: 30px;
 `;
-const FImg = styled(Image)`
+export const FImg = styled(Image)`
   width: 7%;
   height: auto;
   padding-right: 6px;
 `;
 
-const KnowMoreAboutUs: React.FC = () => {
+type KnoMoreAboutUsProps = {
+  data: Array<string>;
+};
+const KnowMoreAboutUs: React.FC<KnoMoreAboutUsProps> = (
+  props: KnoMoreAboutUsProps
+) => {
   return (
-    <Container>
+    <Section>
       <Wrapper>
         <Article1 data={data['two']} />
-        <Features>
-          {data['data'].map((element, i) => (
-            <FWrapper key={i}>
-              <FTitle>
-                <FImg
-                  src={element.image}
-                  alt="feature-icon"
-                  width={20}
-                  height={20}
-                  sizes="100vh"
-                />
-                {element.title}
-              </FTitle>
-              <FSubTitle>{element.subTitle}</FSubTitle>
-              <FDescription>{element.description}</FDescription>
-            </FWrapper>
-          ))}
-        </Features>
-        <Button path={'menu'} title={'View Menu'} />
+
+        <Button path={'story'} title={'View Our Story'} />
       </Wrapper>
-      <WrapperImages>
-        {data['featuresImage'].map((image, i) => (
-          <span key={i}>
-            <Img
-              src={image}
-              alt="know_more_about_us_image"
-              width={240}
-              height={500}
-              sizes="100vh"
-              title={`${image}-${i}`}
-            />
-          </span>
-        ))}
-      </WrapperImages>
-    </Container>
+      <CustomImage data={data['featuresImage']} />
+    </Section>
   );
 };
 export default KnowMoreAboutUs;

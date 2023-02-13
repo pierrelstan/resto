@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Section2 } from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
 import { Menu } from './Menu';
 import Article2 from '../common/Article2';
@@ -13,12 +14,13 @@ const Container = styled.div`
 
 const OurMenu = () => {
   return (
-    <Container>
-      <Article2 data={data['four']} />
-
-      <Menu data={data['ourMenu']} />
-      <Button path={'menu'} title={'View More'} />
-    </Container>
+    <Section2>
+      <Container>
+        <Article2 data={data['four']} />
+        <Menu data={data['ourMenu']} />
+        <Button path={'menu'} title={'View More'} />
+      </Container>
+    </Section2>
   );
 };
 export default OurMenu;
