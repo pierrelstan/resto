@@ -86,6 +86,15 @@ const data = {
         'Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother',
     },
   ],
+  seven: [
+    {
+      fontSize: '70',
+      color: 'white',
+      title: 'We are one of the best Cafes In New York',
+      description:
+        'Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother,hrough True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother,Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother,hrough True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother',
+    },
+  ],
   address: [
     {
       title: 'Openings time',
@@ -243,6 +252,7 @@ const data = {
   ],
   featuresImage: ['/image1.svg', '/image2.svg'],
   featuresImage2: ['/k1.svg', '/k2.svg'],
+  featuresImage3: ['/K3.svg', '/K4.svg'],
   timeLine1: [
     {
       title: '10+ People',

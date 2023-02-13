@@ -1,5 +1,5 @@
 import React from 'react';
-import { AProps, CustomImageProps } from '@/utils/types';
+import { CustomImageProps } from '@/utils/types';
 import { WrapperImages, Img } from '../know_more_about_us/KnowMoreAboutUs';
 
 const CustomImage: React.FC<CustomImageProps> = (props) => {
