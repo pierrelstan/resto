@@ -9,7 +9,6 @@ import CustomImage from '../common/CustomImage';
 
 export const WrapperImages = styled.div`
   display: flex;
-  flex-wrap: wrap;
   @media (max-width: 995px) {
     flex-wrap: wrap;
     justify-content: center;
