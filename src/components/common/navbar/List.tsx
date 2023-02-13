@@ -22,7 +22,18 @@ const List: React.FC = () => {
     <>
       {array.map((list, i) => (
         <ListItem key={i}>
-          <NextLink href={`${list === 'home' ? '/' : list}`} list={list}>
+          <NextLink
+            href={`${
+              list === 'home'
+                ? '/'
+                : list === 'our story'
+                ? 'story'
+                : list === 'about us'
+                ? 'about'
+                : list
+            }`}
+            list={list}
+          >
             {list !== 'Login' && list.toUpperCase()}
           </NextLink>
         </ListItem>

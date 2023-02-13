@@ -2,23 +2,27 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { ITitleProps } from '@/utils/types';
 
-const Container = styled.div`
+const Section = styled.section`
   display: grid;
   gap: 55px;
   justify-content: center;
-  margin-top: 120px;
+  padding-bottom: 20px;
+  padding-top: 120px;
+
   grid-template-columns: repeat(1, 1fr);
   @media (min-width: 850px) {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    height: 100vh;
   }
 
-  @media (max-width: 920px) {
-    margin-top: 147px;
+  @media (max-width: 1340px) {
+    overflow: hidden;
   }
 `;
-
+const Section2 = styled.section`
+  padding-bottom: 120px;
+  padding-top: 120px;
+`;
 const Wrapper = styled.div``;
 const Main = styled.main`
   padding: 5rem 0;
@@ -104,7 +108,7 @@ const AContainer = styled.div`
 `;
 
 export {
-  Container,
+  Section,
   Main,
   Title,
   Text,
@@ -115,4 +119,5 @@ export {
   Column,
   CustomContainer,
   AContainer,
+  Section2,
 };

@@ -1,9 +1,9 @@
 import { CustomContainer, Wrapper } from '@/styles/sharedstyles';
-import { AProps } from '@/utils/types';
+import { AProps, ITitleProps } from '@/utils/types';
 import Description from './Description';
 import Titles from './Titles';
 
-const Article1 = (props: AProps) => {
+const Article1: React.FC<AProps> = (props: AProps) => {
   return (
     <CustomContainer>
       <Wrapper>

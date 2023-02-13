@@ -29,13 +29,12 @@ interface ITitlesProps {
   color: string;
   title: string;
 }
-type AObj = {
+interface AObj {
   fontSize: string;
   color: string;
   title: string;
   description: string;
-  subTitle: boolean;
-};
+}
 
 type AProps = {
   data: Array<AObj>;
@@ -49,7 +48,20 @@ type OurMenuObj = {
 type MenuProps = {
   data: Array<OurMenuObj>;
 };
+type ImageProps = string | StaticImageData;
+type CustomImageProps = {
+  data: Array<ImageProps>;
+};
 
+interface TimeLineObjProps {
+  title: string;
+  subTitle: string;
+  description: string;
+  image: string | StaticImageData;
+}
+type TimeLineProps = {
+  data: Array<TimeLineObjProps>;
+};
 export type {
   ListProps,
   ToggleProps,
@@ -60,4 +72,6 @@ export type {
   ITitlesProps,
   AProps,
   MenuProps,
+  CustomImageProps,
+  TimeLineProps,
 };

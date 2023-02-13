@@ -77,6 +77,15 @@ const data = {
       subTitle: true,
     },
   ],
+  six: [
+    {
+      fontSize: '70',
+      color: 'white',
+      title: 'We are one of the best Cafes In New York',
+      description:
+        'Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother',
+    },
+  ],
   address: [
     {
       title: 'Openings time',
@@ -233,7 +242,8 @@ const data = {
     },
   ],
   featuresImage: ['/image1.svg', '/image2.svg'],
-  data: [
+  featuresImage2: ['/k1.svg', '/k2.svg'],
+  timeLine1: [
     {
       title: '10+ People',
       subTitle: 'We are Small Team',
@@ -251,6 +261,36 @@ const data = {
     {
       title: '200k',
       subTitle: 'We Served',
+      description:
+        'Through True Rich Attended does no end it his mother since favourable.',
+      image: '/icon.svg',
+    },
+  ],
+  timeLine2: [
+    {
+      title: '1998',
+      subTitle: 'Milestone One',
+      description:
+        'Through True Rich Attended does no end it his mother since favourable.',
+      image: '/icon.svg',
+    },
+    {
+      title: '2005',
+      subTitle: 'Milestone One',
+      description:
+        'Through True Rich Attended does no end it his mother since favourable.',
+      image: '/icon.svg',
+    },
+    {
+      title: '2012',
+      subTitle: 'Milestone One',
+      description:
+        'Through True Rich Attended does no end it his mother since favourable.',
+      image: '/icon.svg',
+    },
+    {
+      title: '2022',
+      subTitle: 'Milestone One',
       description:
         'Through True Rich Attended does no end it his mother since favourable.',
       image: '/icon.svg',

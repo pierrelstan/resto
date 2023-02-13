@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styled from 'styled-components';
-import { Container, Wrapper } from '@/styles/sharedstyles';
+import { Section, Wrapper } from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
 import Address from '../common/Address';
 import Article1 from '../common/Article1';
@@ -17,7 +17,7 @@ const HeaderImage = styled(Image)`
 `;
 const Header: React.FC = () => {
   return (
-    <Container>
+    <Section>
       <Wrapper>
         <Article1 data={data['one']} />
 
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           sizes="100vh"
         />
       </WrapperImage>
-    </Container>
+    </Section>
   );
 };
 

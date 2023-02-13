@@ -13,8 +13,8 @@ const InnerLayout = styled.div`
   padding: 0 2.45rem;
   margin-bottom: 1rem;
 
-  @media (min-width: 1320px) {
-    padding: 0 7.45rem;
+  @media (min-width: 820px) {
+    padding: 0 6.45rem;
     width: 100%;
   }
 `;
