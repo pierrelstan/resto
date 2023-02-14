@@ -29,8 +29,9 @@ const ButtonImage = styled(Image)`
 `;
 
 interface IButtonProps {
-  path: string;
+  path?: string;
   title: string;
+  type?: string;
 }
 const Button: React.FC<IButtonProps> = ({ path, title }) => {
   return (
