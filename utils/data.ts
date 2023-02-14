@@ -95,6 +95,23 @@ const data = {
         'Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother,hrough True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother,Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother,hrough True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother. Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother',
     },
   ],
+  eight: [
+    {
+      fontSize: '70',
+      color: 'white',
+      title: 'Have a Question ?',
+      description: '',
+      subTitle: true,
+    },
+    {
+      fontSize: '70',
+      color: 'white',
+      title: 'Get in Touch with us 👋',
+      description:
+        'Fill up the Form  and ou team will get back to within 24 hrs',
+      subTitle: true,
+    },
+  ],
   address: [
     {
       title: 'Openings time',
@@ -253,6 +270,7 @@ const data = {
   featuresImage: ['/image1.svg', '/image2.svg'],
   featuresImage2: ['/k1.svg', '/k2.svg'],
   featuresImage3: ['/K3.svg', '/K4.svg'],
+  featuresImage4: ['/K4.svg', '/K3.svg'],
   timeLine1: [
     {
       title: '10+ People',

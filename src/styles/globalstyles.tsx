@@ -27,6 +27,11 @@ const GlobalStyle = createGlobalStyle`
 
     }
 
+    button,
+    input,
+    textarea {
+      appearance: none;
+    }
 `;
 
 export default GlobalStyle;

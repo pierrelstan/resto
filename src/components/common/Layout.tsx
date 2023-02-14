@@ -17,6 +17,10 @@ const InnerLayout = styled.div`
     padding: 0 6.45rem;
     width: 100%;
   }
+  @media (max-width: 280px) {
+    padding: 0px 0.45rem;
+    margin-bottom: 1rem;
+  }
 `;
 export default function Layout({ children }: any) {
   const date = new Date().getFullYear();
