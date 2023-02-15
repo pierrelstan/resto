@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 import { ITitleProps } from '@/utils/types';
 
-const Section = styled.section`
+export const Section = styled.section`
   display: grid;
   gap: 55px;
   justify-content: center;
@@ -19,12 +19,12 @@ const Section = styled.section`
     overflow: hidden;
   }
 `;
-const Section2 = styled.section`
+export const Section2 = styled.section`
   padding-bottom: 120px;
   padding-top: 120px;
 `;
-const Wrapper = styled.div``;
-const Main = styled.main`
+export const Wrapper = styled.div``;
+export const Main = styled.main`
   padding: 5rem 0;
   flex: 1;
   display: flex;
@@ -32,7 +32,7 @@ const Main = styled.main`
   align-items: center;
 `;
 
-const WrapperTitle = styled.div`
+export const WrapperTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
@@ -43,7 +43,7 @@ const WrapperTitle = styled.div`
   }
 `;
 
-const Title = styled.h1<ITitleProps>`
+export const Title = styled.h1<ITitleProps>`
   font-size: ${(props) => props.fontSize}px;
   color: ${(props) =>
     props.color === 'white'
@@ -65,16 +65,16 @@ const Title = styled.h1<ITitleProps>`
   }
 `;
 
-const Text = styled.p`
+export const Text = styled.p`
   font-size: 18px;
   font-family: 'Poppins', sans-serif;
   color: ${(props) => props.theme.colors.grey};
   line-height: 1.45em;
 `;
 
-const TitleImage = styled(Image)``;
+export const TitleImage = styled(Image)``;
 
-const Columns = styled.div`
+export const Columns = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
@@ -83,11 +83,11 @@ const Columns = styled.div`
     grid-template-columns: repeat(3, 1fr);
   }
 `;
-const Column = styled.div`
+export const Column = styled.div`
   padding: 1rem;
   height: auto;
 `;
-const CustomContainer = styled.div`
+export const CustomContainer = styled.div`
   display: grid;
   gap: 5px;
   max-width;1200px;
@@ -96,7 +96,7 @@ const CustomContainer = styled.div`
   margin-bottom: 20px;
   grid-template-columns: repeat(1, 1fr);
 `;
-const AContainer = styled.div`
+export const AContainer = styled.div`
   display: grid;
   align-items: center;
   margin-top: 120px;
@@ -106,18 +106,3 @@ const AContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 `;
-
-export {
-  Section,
-  Main,
-  Title,
-  Text,
-  Wrapper,
-  WrapperTitle,
-  TitleImage,
-  Columns,
-  Column,
-  CustomContainer,
-  AContainer,
-  Section2,
-};

@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import Layout from '@/components/common/Layout';
+import Layout from '@/components/common/Layout/Layout';
 import Header from '@/components/Header/Header';
 import KnowMoreAboutUs from '@/components/know_more_about_us/KnowMoreAboutUs';
 import Map from '@/components/Map/Map';

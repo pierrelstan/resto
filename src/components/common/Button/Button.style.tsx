@@ -1,9 +1,7 @@
-import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 
-const Btn = styled.button`
+export const Btn = styled.button`
   background-color: ${(props) => props.theme.colors.yellow};
   border: none;
   color: ${(props) => props.theme.colors.black};
@@ -24,28 +22,6 @@ const Btn = styled.button`
     gap: 7px;
   }
 `;
-const ButtonImage = styled(Image)`
+export const ButtonImage = styled(Image)`
   color: ${(props) => props.theme.colors.black};
 `;
-
-interface IButtonProps {
-  path?: string;
-  title: string;
-  type?: string;
-}
-const Button: React.FC<IButtonProps> = ({ path, title }) => {
-  return (
-    <Link href={`/${path}`}>
-      <Btn>
-        <div>{title}</div>
-        <ButtonImage
-          src={'/btn-arrow.svg'}
-          alt="icon-arrow"
-          width={30}
-          height={30}
-        />
-      </Btn>
-    </Link>
-  );
-};
-export default Button;

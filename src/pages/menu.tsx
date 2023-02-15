@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Article2 from '@/components/common/Article2';
-import Layout from '@/components/common/Layout';
+import Layout from '@/components/common/Layout/Layout';
 import Map from '@/components/Map/Map';
 import { Menu } from '@/components/our_menu/Menu';
 import IndexHead from '@/pages/IndexHead';

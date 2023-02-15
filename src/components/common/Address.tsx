@@ -1,4 +1,4 @@
-import { Text } from '@/styles/sharedstyles';
+import * as SharedStyles from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
 import Titles from '../common/Titles';
 
@@ -8,8 +8,10 @@ const Address = () => {
       {data['address'].map((address, i) => (
         <div key={i}>
           <Titles title={address.title} color={'white'} fontSize={'30'} />
-          <Text>{address.description}</Text>
-          {address.info && <Text>{address.info}</Text>}
+          <SharedStyles.Text>{address.description}</SharedStyles.Text>
+          {address.info && (
+            <SharedStyles.Text>{address.info}</SharedStyles.Text>
+          )}
         </div>
       ))}
     </div>

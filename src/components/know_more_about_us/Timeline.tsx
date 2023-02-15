@@ -1,21 +1,14 @@
 import React from 'react';
-import { AProps, TimeLineProps } from '@/utils/types';
-import {
-  FDescription,
-  FImg,
-  FSubTitle,
-  FTitle,
-  FWrapper,
-  Features,
-} from './KnowMoreAboutUs';
+import { TimeLineProps } from '@/utils/types';
+import * as S from './KnowMoreAboutUs.style';
 
 const Timeline: React.FC<TimeLineProps> = (props) => {
   return (
-    <Features>
+    <S.Features>
       {props.data.map((element, i) => (
-        <FWrapper key={i}>
-          <FTitle>
-            <FImg
+        <S.FWrapper key={i}>
+          <S.FTitle>
+            <S.FImg
               src={element.image}
               alt="feature-icon"
               width={20}
@@ -23,12 +16,12 @@ const Timeline: React.FC<TimeLineProps> = (props) => {
               sizes="100vh"
             />
             {element.title}
-          </FTitle>
-          <FSubTitle>{element.subTitle}</FSubTitle>
-          <FDescription>{element.description}</FDescription>
-        </FWrapper>
+          </S.FTitle>
+          <S.FSubTitle>{element.subTitle}</S.FSubTitle>
+          <S.FDescription>{element.description}</S.FDescription>
+        </S.FWrapper>
       ))}
-    </Features>
+    </S.Features>
   );
 };
 

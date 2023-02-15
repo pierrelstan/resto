@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { Section } from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
 import Article1 from './Article1';
-import Button from './Button';
+import Button from './Button/Button';
 
 const BigImage = styled(Image)`
   width: 100%;
