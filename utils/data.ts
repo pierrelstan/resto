@@ -108,8 +108,16 @@ const data = {
       color: 'white',
       title: 'Get in Touch with us 👋',
       description:
-        'Fill up the Form  and ou team will get back to within 24 hrs',
+        'Fill up the Form  and our team will get back to within 24 hrs',
       subTitle: true,
+    },
+  ],
+  nine: [
+    {
+      fontSize: '70',
+      color: 'white',
+      title: 'Login',
+      description: '',
     },
   ],
   address: [

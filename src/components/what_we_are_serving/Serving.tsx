@@ -1,28 +1,21 @@
 import Image from 'next/image';
-import styled from 'styled-components';
-import { Column, Columns, Text } from '@/styles/sharedstyles';
+import * as SharedStyles from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
+import * as S from './Serving.style';
 
-const Container = styled.div`
-  width: 100%;
-  background: ${({ theme }) => theme.colors.black};
-  @media (max-width: 430px) {
-    background: none;
-  }
-`;
 const Serving: React.FC = () => {
   return (
-    <Container>
-      <Columns>
+    <S.Container>
+      <SharedStyles.Columns>
         {data['servingData'].map((serve, i) => (
-          <Column key={i}>
+          <SharedStyles.Column key={i}>
             <Image src={serve.icon} alt="serving-icon" width={70} height={70} />
             <h1>{serve.title}</h1>
-            <Text>{serve.description}</Text>
-          </Column>
+            <SharedStyles.Text>{serve.description}</SharedStyles.Text>
+          </SharedStyles.Column>
         ))}
-      </Columns>
-    </Container>
+      </SharedStyles.Columns>
+    </S.Container>
   );
 };
 export default Serving;

@@ -1,13 +1,13 @@
 import React from 'react';
 import { CustomImageProps } from '@/utils/types';
-import { WrapperImages, Img } from '../know_more_about_us/KnowMoreAboutUs';
+import * as S from '../know_more_about_us/KnowMoreAboutUs.style';
 
 const CustomImage: React.FC<CustomImageProps> = (props) => {
   return (
-    <WrapperImages>
+    <S.WrapperImages>
       {props.data.map((image: any, i) => (
         <span key={i}>
-          <Img
+          <S.Img
             src={image}
             alt="know_more_about_us_image"
             width={240}
@@ -17,7 +17,7 @@ const CustomImage: React.FC<CustomImageProps> = (props) => {
           />
         </span>
       ))}
-    </WrapperImages>
+    </S.WrapperImages>
   );
 };
 export default CustomImage;

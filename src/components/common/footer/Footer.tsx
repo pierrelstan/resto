@@ -5,34 +5,8 @@ import {
   IoLogoInstagram,
   IoLogoTwitter,
 } from 'react-icons/io5';
-import styled from 'styled-components';
 import { IFooterProps } from '@/utils/types';
-
-const Container = styled.div`
-  display: flex;
-  justify-content: end;
-  flex-direction: column;
-  margin-top: 30px;
-  align-items: center;
-  height: 300px;
-  color: ${(props) => props.theme.colors.white};
-  background-color: ${(props) => props.theme.colors.black};
-`;
-const Title = styled.h5`
-  font-size: 18px;
-  margin: 9px;
-  font-family: 'Poppins', sans-serif;
-`;
-
-const WrapperIcons = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-`;
-const Rights = styled.p`
-  font-family: 'Poppins', sans-serif;
-`;
-const Link = styled.a``;
+import * as S from './Footer.style';
 
 const Footer: React.FC<IFooterProps> = ({ date }) => {
   const icons = [
@@ -42,15 +16,17 @@ const Footer: React.FC<IFooterProps> = ({ date }) => {
   ];
 
   return (
-    <Container data-cy="footer">
-      <Title>Follow us on:</Title>
-      <WrapperIcons>
+    <S.Container data-cy="footer">
+      <S.Title>Follow us on:</S.Title>
+      <S.WrapperIcons>
         {icons.map((icon, i) => (
-          <Link key={i}>{icon}</Link>
+          <div key={i}>
+            <S.Link>{icon}</S.Link>
+          </div>
         ))}
-      </WrapperIcons>
-      <Rights>© {date} YayaResto </Rights>
-    </Container>
+      </S.WrapperIcons>
+      <S.Rights>© {date} YayaResto </S.Rights>
+    </S.Container>
   );
 };
 export default Footer;

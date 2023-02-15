@@ -1,12 +1,12 @@
-import { CustomContainer, Wrapper } from '@/styles/sharedstyles';
-import { AProps, ITitleProps } from '@/utils/types';
+import * as SharedStyles from '@/styles/sharedstyles';
+import { AProps } from '@/utils/types';
 import Description from './Description';
 import Titles from './Titles';
 
 const Article1: React.FC<AProps> = (props: AProps) => {
   return (
-    <CustomContainer>
-      <Wrapper>
+    <SharedStyles.CustomContainer>
+      <SharedStyles.Wrapper>
         {props.data.map((element, i) => (
           <Titles
             fontSize={element.fontSize}
@@ -15,7 +15,7 @@ const Article1: React.FC<AProps> = (props: AProps) => {
             key={i}
           />
         ))}
-      </Wrapper>
+      </SharedStyles.Wrapper>
       <div>
         {props.data.map((element, i) => (
           <div key={i}>
@@ -23,7 +23,7 @@ const Article1: React.FC<AProps> = (props: AProps) => {
           </div>
         ))}
       </div>
-    </CustomContainer>
+    </SharedStyles.CustomContainer>
   );
 };
 

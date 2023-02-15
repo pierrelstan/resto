@@ -1,41 +1,32 @@
 import Image from 'next/image';
-import styled from 'styled-components';
-import { Section, Wrapper } from '@/styles/sharedstyles';
+import * as SharedStyles from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
+import * as S from './Header.style';
 import Address from '../common/Address';
 import Article1 from '../common/Article1';
-import Button from '../common/Button';
+import Button from '../common/Button/Button';
 
-const WrapperImage = styled.div``;
-
-const Info = styled.div`
-  margin-top: 60px;
-`;
-const HeaderImage = styled(Image)`
-  width: 100%;
-  height: auto;
-`;
 const Header: React.FC = () => {
   return (
-    <Section>
-      <Wrapper>
+    <SharedStyles.Section>
+      <SharedStyles.Wrapper>
         <Article1 data={data['one']} />
 
         <Button path={'menu'} title={'View Menu'} />
-        <Info>
+        <S.Info>
           <Address />
-        </Info>
-      </Wrapper>
-      <WrapperImage>
-        <HeaderImage
+        </S.Info>
+      </SharedStyles.Wrapper>
+      <SharedStyles.Wrapper>
+        <S.HeaderImage
           src={'/hero.png'}
           alt="hero-image"
           width={220}
           height={320}
           sizes="100vh"
         />
-      </WrapperImage>
-    </Section>
+      </SharedStyles.Wrapper>
+    </SharedStyles.Section>
   );
 };
 
