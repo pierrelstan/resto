@@ -106,3 +106,6 @@ export const AContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
 `;
+export const BigImage = styled(Image)`
+  width: 100%;
+`;

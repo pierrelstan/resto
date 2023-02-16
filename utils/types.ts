@@ -74,4 +74,6 @@ export type {
   MenuProps,
   CustomImageProps,
   TimeLineProps,
+  OurMenuObj,
+  ImageProps,
 };
