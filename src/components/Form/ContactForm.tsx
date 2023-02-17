@@ -1,5 +1,6 @@
 import { useForm, Resolver } from 'react-hook-form';
 import FormField from './FormField';
+import * as S from './stylesForm';
 import Button from '../common/Button/Button';
 
 export interface FormValues {
@@ -33,33 +34,30 @@ const ContactForm = () => {
   return (
     <FormField onSubmit={onSubmit}>
       <div>
-        <div className="label">
+        <S.Label>
           <label htmlFor="name">Name:</label>
-        </div>
-        <input
+        </S.Label>
+        <S.Input
           type="text"
           {...register('name')}
           placeholder="Enter your name"
-          className="contact-input"
         />
-        <div className="label">
+        <S.Label>
           <label htmlFor="email">Email:</label>
-        </div>
-        <input
+        </S.Label>
+        <S.Input
           type="email"
           {...register('email')}
           placeholder="Enter your email"
-          className="contact-input"
         />
         {errors?.email && <p>{errors.email.message}</p>}
       </div>
-      <div className="label">
+      <S.Label>
         <label htmlFor="message">Message:</label>
-      </div>
+      </S.Label>
       <textarea
         {...register('message')}
         placeholder="Enter your message"
-        className="contact-input"
       ></textarea>
 
       <div>

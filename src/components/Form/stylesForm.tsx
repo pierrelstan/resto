@@ -1,46 +1,9 @@
 import styled from 'styled-components';
 
-const Form = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
 
-  .contact-input {
-    padding: 14px 8px;
-    background-color: ${(props) => props.theme.colors.blackLight};
-    margin-bottom: 20px;
-    border-style: solid;
-    border-color: ${(props) => props.theme.colors.grey};
-    border-width: 1px;
-    border-radius: 2px;
-    width: 100%;
-    @media (max-width: 420px) {
-      padding: 18px 10px;
-      margin: 2px 0 0;
-    }
-  }
-  .login-input {
-    padding: 14px 8px;
-    background-color: ${(props) => props.theme.colors.blackLight};
-    margin-bottom: 20px;
-    border-style: solid;
-    border-color: ${(props) => props.theme.colors.grey};
-    border-width: 1px;
-    border-radius: 2px;
-    width: 100%;
-    @media (max-width: 420px) {
-      padding: 18px 10px;
-      margin: 2px 0 0;
-    }
-  }
-
-  .label {
-    font-family: 'Poppins', sans-serif;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-
-  .contact-input,
-  .login-input,
   textarea {
     color: ${(props) => props.theme.colors.white};
   }
@@ -73,4 +36,26 @@ const Form = styled.form`
     min-height: 10rem;
   }
 `;
-export { Form };
+export const Input = styled.input.attrs((props) => ({
+  type: props.type,
+}))`
+  padding: 14px 8px;
+  background-color: ${(props) => props.theme.colors.blackLight};
+  margin-bottom: 20px;
+  border-style: solid;
+  border-color: ${(props) => props.theme.colors.grey};
+  border-width: 1px;
+  border-radius: 2px;
+  width: 100%;
+  color: ${(props) => props.theme.colors.white} !important;
+  @media (max-width: 420px) {
+    padding: 18px 10px;
+    margin: 2px 0 0;
+  }
+`;
+
+export const Label = styled.div`
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`;

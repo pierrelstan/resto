@@ -6,7 +6,7 @@ import { Menu } from '@/components/our_menu/Menu';
 import IndexHead from '@/pages/IndexHead';
 import { data } from '@/utils/data';
 
-const ViewMenu: NextPage = () => (
+const ViewMenu = () => (
   <div>
     <IndexHead />
     <Layout>

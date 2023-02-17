@@ -1,13 +1,28 @@
+import React, { useEffect, useState } from 'react';
 import * as SharedStyles from '@/styles/sharedstyles';
 import { AProps } from '@/utils/types';
 import Description from './Description';
 import Titles from './Titles';
 
+interface AddressObj {
+  title: string;
+  description: string;
+  info?: string;
+  color: string;
+  fontSize: string;
+}
+type Address = Array<AddressObj>;
+
 const Article2 = (props: AProps) => {
+  const [state, setState] = useState<Address>([]);
+
+  useEffect(() => {
+    return setState(props.data);
+  }, []);
   return (
     <SharedStyles.AContainer>
       <SharedStyles.Wrapper>
-        {props.data.map((element, i) => (
+        {state.map((element, i) => (
           <Titles
             fontSize={element.fontSize}
             color={element.color}
@@ -17,7 +32,7 @@ const Article2 = (props: AProps) => {
         ))}
       </SharedStyles.Wrapper>
       <div>
-        {props.data.map((element, i) => (
+        {state.map((element, i) => (
           <div key={i}>
             <Description description={element.description} />
           </div>

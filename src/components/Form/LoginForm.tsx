@@ -1,6 +1,7 @@
 import { useForm, Resolver } from 'react-hook-form';
 import { FormValues } from './ContactForm';
 import FormField from './FormField';
+import * as S from './stylesForm';
 import Button from '../common/Button/Button';
 
 const resolver: Resolver<FormValues> = async (values) => {
@@ -34,24 +35,22 @@ const LoginForm = () => {
   return (
     <FormField onSubmit={onSubmit}>
       <div>
-        <div className="label">
+        <S.Label>
           <label htmlFor="email">Email:</label>
-        </div>
-        <input
+        </S.Label>
+        <S.Input
           type="text"
           {...register('name')}
           placeholder="Enter your Email"
-          className="login-input"
         />
         {errors?.email && <p>{errors.email.message}</p>}
-        <div className="label">
+        <S.Label>
           <label htmlFor="password">Password:</label>
-        </div>
-        <input
+        </S.Label>
+        <S.Input
           type="password"
           {...register('password')}
           placeholder="Enter yout password"
-          className="login-input"
         />
         {errors?.password && <p>{errors.password.message}</p>}
       </div>
