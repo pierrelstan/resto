@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import * as SharedStyles from '@/styles/sharedstyles';
 import { MenuProps, OurMenuObj } from '@/utils/types';
 import * as S from './OurMenu.style';
+import LoadingSpinner from '../Loading/LoadingSpinner';
 
 type state = Array<OurMenuObj>;
 
@@ -10,8 +11,10 @@ export const Menu: React.FC<MenuProps> = (props: MenuProps) => {
 
   useEffect(() => {
     return setState(props.data);
-  }, []);
-
+  }, [props.data]);
+  if (!state) {
+    return <LoadingSpinner />;
+  }
   return (
     <SharedStyles.Wrapper>
       <SharedStyles.Columns>

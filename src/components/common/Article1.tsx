@@ -16,7 +16,7 @@ const Article1: React.FC<AProps> = (props: AProps) => {
 
   useEffect(() => {
     return setState(props.data);
-  }, []);
+  }, [props.data]);
 
   return (
     <SharedStyles.CustomContainer>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { CustomImageProps, ImageProps } from '@/utils/types';
 import * as S from '../know_more_about_us/KnowMoreAboutUs.style';
+import LoadingSpinner from '../Loading/LoadingSpinner';
 
 type Image = Array<ImageProps>;
 
@@ -8,7 +9,11 @@ const CustomImage: React.FC<CustomImageProps> = (props) => {
   const [state, setState] = useState<Image>();
   useEffect(() => {
     setState(props.data);
-  }, []);
+  }, [props.data]);
+
+  if (!state) {
+    return <LoadingSpinner />;
+  }
   return (
     <S.WrapperImages>
       {state &&
