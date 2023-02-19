@@ -3,9 +3,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { IoMenuSharp, IoCloseSharp } from 'react-icons/io5';
 import styled from 'styled-components';
-import List from '@/components/common/navbar/List';
 // eslint-disable-next-line import/order
-import { ToggleProps } from '@/utils/types';
+import { ListProps, ToggleProps } from '@/utils/types';
 
 export const Nav = styled.div`
   display: flex;
@@ -79,10 +78,23 @@ export const Button = styled.button`
   border: 1px solid #fff;
   background: ${(props) => props.theme.colors.blackLight};
   border-radius: 5px;
-  color: ${(props) => props.theme.colors.white};
+  color: inherit;
   padding: 10px 24px;
+
   @media (max-width: 960px) {
     margin-left: 20px;
     margin-top: 18px;
   }
+`;
+
+export const ListItem = styled.li`
+  font-size: 18px;
+  font-weight: 700;
+  list-style-type: none;
+  color: inherit;
+  font-family: 'Poppins', sans-serif;
+`;
+export const NextLink = styled.div`
+  display: block;
+  padding: 1em;
 `;

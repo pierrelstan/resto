@@ -1,42 +1,26 @@
 import React from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { ListProps } from '@/utils/types';
-
-const ListItem = styled.li`
-  text-transform: uppercase;
-  font-size: 18px;
-  list-style-type: none;
-  color: ${(props) => props.theme.colors.white};
-  font-family: 'Poppins', sans-serif;
-`;
-const NextLink = styled(Link)<ListProps>`
-  color: ${(props) => props.theme.colors.white};
-  display: block;
-  padding: 1em;
-`;
+import ActiveLink from './ActiveLink';
+import * as S from './Navbar.style';
 
 const List: React.FC = () => {
-  const array = ['home', 'menu', 'about us', 'our story', 'contact'];
+  const array = [
+    { title: 'Home', path: '/' },
+    { title: 'Menu', path: '/menu' },
+    { title: 'About us', path: '/about' },
+    { title: 'Our Story', path: '/story' },
+    { title: 'Book a table', path: '/reservation' },
+    { title: 'Contact', path: '/contact' },
+  ];
   return (
     <>
-      {array.map((list, i) => (
-        <ListItem key={i}>
-          <NextLink
-            href={`${
-              list === 'home'
-                ? '/'
-                : list === 'our story'
-                ? 'story'
-                : list === 'about us'
-                ? 'about'
-                : list
-            }`}
-            list={list}
-          >
-            {list !== 'Login' && list.toUpperCase()}
-          </NextLink>
-        </ListItem>
+      {array.map((menu, index) => (
+        <S.ListItem key={index}>
+          <S.NextLink>
+            <ActiveLink href={menu.path} path={menu.path}>
+              {menu.title}
+            </ActiveLink>
+          </S.NextLink>
+        </S.ListItem>
       ))}
     </>
   );

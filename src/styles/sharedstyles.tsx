@@ -75,11 +75,13 @@ export const Text = styled.p`
 export const TitleImage = styled(Image)``;
 
 export const Columns = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   gap: 1rem;
-  @media (min-width: 600px) {
+  @media (min-width: 620px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 920px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;

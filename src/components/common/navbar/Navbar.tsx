@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import List from '@/components/common/navbar/List';
 // eslint-disable-next-line import/order
+import ActiveLink from './ActiveLink';
 import * as S from './Navbar.style';
 
 const Navbar: React.FC = () => {
@@ -25,8 +26,11 @@ const Navbar: React.FC = () => {
 
       <S.ListItems toggle={toggle}>
         <List />
+
         <S.Button>
-          <Link href={'/login'}>LOGIN</Link>
+          <ActiveLink href={'/login'} path={'/login'}>
+            <S.ListItem>Login</S.ListItem>
+          </ActiveLink>
         </S.Button>
       </S.ListItems>
     </S.Wrapper>
