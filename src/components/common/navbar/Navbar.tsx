@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Link from 'next/link';
 import List from '@/components/common/navbar/List';
 // eslint-disable-next-line import/order
 import ActiveLink from './ActiveLink';
