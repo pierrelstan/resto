@@ -7,7 +7,9 @@ const Map = (props: Props) => {
   return (
     <S.Container>
       <S.Wrapper>
-        <Address />
+        <S.WrapperAddress>
+          <Address />
+        </S.WrapperAddress>
         <S.Img
           src={'/Map.svg'}
           width={300}
