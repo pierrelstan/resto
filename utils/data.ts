@@ -149,100 +149,100 @@ const data = {
     {
       title: 'Drp Coffee',
       price: '08.85',
-      image: '/Image (6).svg',
+      image: '/Image.png',
     },
     {
       title: 'Choco Cup Cake',
       price: '04.85',
-      image: '/Image (1).svg',
+      image: '/Image (1).png',
     },
     {
       title: 'Chickenn Burger',
       price: '8.85',
 
-      image: '/Image (2).svg',
+      image: '/Image (2).png',
     },
     {
       title: 'French Fries',
       price: '7.85',
 
-      image: '/Image (3).svg',
+      image: '/Image (3).png',
     },
     {
       title: 'Sandwich',
       price: '3.85',
 
-      image: '/Image (4).svg',
+      image: '/Image (4).png',
     },
     {
       title: 'Chinese Soup',
       price: '8.85',
-      image: '/Image (5).svg',
+      image: '/Image (5).png',
     },
   ],
   ourMenu2: [
     {
       title: 'Drp Coffee',
       price: '08.85',
-      image: '/Image (66).svg',
+      image: '/Image.png',
     },
     {
       title: 'Choco Cup Cake',
       price: '04.85',
-      image: '/Image (1).svg',
+      image: '/Image (1).png',
     },
     {
       title: 'Chickenn Burger',
       price: '8.85',
 
-      image: '/Image (2).svg',
+      image: '/Image (2).png',
     },
     {
       title: 'French Fries',
       price: '7.85',
 
-      image: '/Image (3).svg',
+      image: '/Image (3).png',
     },
     {
       title: 'Sandwich',
       price: '3.85',
 
-      image: '/Image (4).svg',
+      image: '/Image (4).png',
     },
     {
       title: 'Chinese Soup',
       price: '8.85',
-      image: '/Image (5).svg',
+      image: '/Image (5).png',
     },
     {
       title: 'Quafe Brade',
       price: '7.85',
-      image: '/Image (6).svg',
+      image: '/Image (6).png',
     },
     {
       title: 'Dalgona Cofee',
       price: '4.97',
-      image: '/Image (7).svg',
+      image: '/Image (7).png',
     },
     {
       title: 'Chowmin Noodle',
       price: '8.97',
-      image: '/Image (8).svg',
+      image: '/Image (8).png',
     },
     {
       title: 'Coka Cola',
       price: '8.97',
-      image: '/Image (9).svg',
+      image: '/Image (9).png',
     },
     {
       title: 'Fruit Salad',
       price: '3.97',
-      image: '/Image (10).svg',
+      image: '/Image (10).png',
     },
     {
       title: 'Cocktail',
       price: '8.85',
-      image: '/Image (11).svg',
+      image: '/Image (11).png',
     },
   ],
   servingData: [
