@@ -12,7 +12,7 @@ const Titles: React.FC<ITitlesProps> = (props) => {
         {props.title}
       </SharedStyles.Title>
 
-      {props.color === 'yellow' && (
+      {props.color === 'peach' && (
         <SharedStyles.TitleImage
           src={'/line.svg'}
           alt={'arrow-title'}

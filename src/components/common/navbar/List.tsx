@@ -1,42 +1,47 @@
-import React from 'react';
-import Link from 'next/link';
-import styled from 'styled-components';
-import { ListProps } from '@/utils/types';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import ActiveLink from './ActiveLink';
+import * as S from './Navbar.style';
 
-const ListItem = styled.li`
-  text-transform: uppercase;
-  font-size: 18px;
-  list-style-type: none;
-  color: ${(props) => props.theme.colors.white};
-  font-family: 'Poppins', sans-serif;
-`;
-const NextLink = styled(Link)<ListProps>`
-  color: ${(props) => props.theme.colors.white};
-  display: block;
-  padding: 1em;
-`;
+type StyleLinkProps = {
+  href: string;
+  path: string;
+};
+type stateProps = string;
 
 const List: React.FC = () => {
-  const array = ['home', 'menu', 'about us', 'our story', 'contact'];
+  const [state, setState] = useState<stateProps>();
+  const router = useRouter();
+  const array = [
+    { title: 'Home', path: '/' },
+    { title: 'Menu', path: '/menu' },
+    { title: 'About us', path: '/about' },
+    { title: 'Our Story', path: '/story' },
+    { title: 'Book a table', path: '/book' },
+    { title: 'Contact', path: '/contact' },
+  ];
+  // useEffect(() => {
+  //   setState(href);
+  // }, [state]);
+
+  const handleClick = (menu: any, e: any) => {
+    e.preventDefault();
+    router.push(menu);
+  };
   return (
     <>
-      {array.map((list, i) => (
-        <ListItem key={i}>
-          <NextLink
-            href={`${
-              list === 'home'
-                ? '/'
-                : list === 'our story'
-                ? 'story'
-                : list === 'about us'
-                ? 'about'
-                : list
-            }`}
-            list={list}
-          >
-            {list !== 'Login' && list.toUpperCase()}
-          </NextLink>
-        </ListItem>
+      {array.map((menu, index) => (
+        <S.ListItem key={index}>
+          <S.NextLink>
+            <S.StyledLink
+              href={menu.path}
+              path={router.asPath}
+              onClick={(e) => handleClick(menu.path, e)}
+            >
+              {menu.title}
+            </S.StyledLink>
+          </S.NextLink>
+        </S.ListItem>
       ))}
     </>
   );

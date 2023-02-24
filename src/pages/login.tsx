@@ -26,6 +26,7 @@ const Login = () => {
               width={220}
               height={320}
               sizes="100vh"
+              priority
             />
           </SharedStyles.Wrapper>
         </SharedStyles.Section>

@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 interface ListProps {
   list: string;
+  path: string;
 }
 interface ToggleProps {
   toggle: Boolean;

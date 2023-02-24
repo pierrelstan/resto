@@ -12,7 +12,7 @@ const data = {
   two: [
     {
       fontSize: '18',
-      color: 'yellow',
+      color: 'peach',
       title: 'Know more about us',
       description: '',
       subTitle: true,
@@ -29,7 +29,7 @@ const data = {
   three: [
     {
       fontSize: '18',
-      color: 'yellow',
+      color: 'peach',
       title: 'what we are serving',
       description: '',
       subTitle: true,
@@ -46,7 +46,7 @@ const data = {
   four: [
     {
       fontSize: '18',
-      color: 'yellow',
+      color: 'peach',
       title: 'our menu',
       description: '',
       subTitle: true,
@@ -63,7 +63,7 @@ const data = {
   five: [
     {
       fontSize: '18',
-      color: 'yellow',
+      color: 'peach',
       title: 'our menu',
       description: '',
       subTitle: true,
@@ -117,6 +117,14 @@ const data = {
       fontSize: '70',
       color: 'white',
       title: 'Login',
+      description: '',
+    },
+  ],
+  ten: [
+    {
+      fontSize: '70',
+      color: 'white',
+      title: 'Book a table',
       description: '',
     },
   ],

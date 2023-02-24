@@ -48,20 +48,20 @@ export const Title = styled.h1<ITitleProps>`
   color: ${(props) =>
     props.color === 'white'
       ? props.theme.colors.white
-      : props.color === 'yellow'
-      ? props.theme.colors.yellow
+      : props.color === 'peach'
+      ? props.theme.colors.peach
       : props.color === 'cyan'
       ? props.theme.colors.cyan
       : props.theme.colors.grey};
   text-transform: ${(props) =>
-    props.color === 'yellow' ? 'uppercase' : 'none'};
+    props.color === 'peach' ? 'uppercase' : 'none'};
   line-height: 110%;
   margin: 0;
   @media (max-width: 920px) {
     font-size: ${(props) =>
-      props.color === 'yellow' ? `${props.fontSize}px` : '32px'};
+      props.color === 'peach' ? `${props.fontSize}px` : '32px'};
     text-transform: ${(props) =>
-      props.color === 'yellow' ? 'uppercase' : 'none'};
+      props.color === 'peach' ? 'uppercase' : 'none'};
   }
 `;
 
@@ -75,11 +75,13 @@ export const Text = styled.p`
 export const TitleImage = styled(Image)``;
 
 export const Columns = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   display: grid;
   gap: 1rem;
-  @media (min-width: 600px) {
+  @media (min-width: 620px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 920px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;

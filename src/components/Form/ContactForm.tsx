@@ -1,5 +1,4 @@
 import { useForm, Resolver } from 'react-hook-form';
-import FormField from './FormField';
 import * as S from './stylesForm';
 import Button from '../common/Button/Button';
 
@@ -32,7 +31,7 @@ const ContactForm = () => {
   } = useForm<FormValues>({ resolver });
   const onSubmit = handleSubmit((data) => console.log(data));
   return (
-    <FormField onSubmit={onSubmit}>
+    <S.Form onSubmit={onSubmit}>
       <div>
         <S.Label>
           <label htmlFor="name">Name:</label>
@@ -63,7 +62,7 @@ const ContactForm = () => {
       <div>
         <Button title="Send Message" type="submit" />
       </div>
-    </FormField>
+    </S.Form>
   );
 };
 export default ContactForm;
