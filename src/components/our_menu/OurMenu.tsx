@@ -8,13 +8,11 @@ import Button from '../common/Button/Button';
 
 const OurMenu = () => {
   return (
-    <SharedStyles.Section2>
-      <S.Container>
-        <Article2 data={data['four']} />
-        <Menu data={data['ourMenu']} />
-        <Button path={'menu'} title={'View More'} />
-      </S.Container>
-    </SharedStyles.Section2>
+    <S.Container>
+      <Article2 data={data['four']} />
+      <Menu data={data['ourMenu']} />
+      <Button path={'menu'} title={'View More'} />
+    </S.Container>
   );
 };
 export default OurMenu;

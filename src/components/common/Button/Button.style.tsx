@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styled from 'styled-components';
 
 export const Btn = styled.button`
-  background-color: ${(props) => props.theme.colors.yellow};
+  background-color: ${(props) => props.theme.colors.peach};
   border: none;
   color: ${(props) => props.theme.colors.black};
   padding: 12px 22px;
@@ -22,6 +22,11 @@ export const Btn = styled.button`
     gap: 7px;
   }
 `;
+
+export const BtInput = styled.input.attrs({
+  type: 'submit',
+  value: 'Submit',
+})``;
 export const ButtonImage = styled(Image)`
   color: ${(props) => props.theme.colors.black};
 `;

@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styled from 'styled-components';
+
 export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  flex-flow: column nowrap;
+  display: grid;
+  align-content: center;
 `;
 
 export const Wrapper = styled.div``;

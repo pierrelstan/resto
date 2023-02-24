@@ -10,7 +10,7 @@ type stateProps = string;
 
 const StyledLink = styled.a<StyleLinkProps>`
   color: ${({ href, path, theme }: any) =>
-    href === path ? theme.colors.yellow : theme.colors.white};
+    href === path ? theme.colors.peach : theme.colors.white};
 `;
 
 function ActiveLink({ children, href }: any) {

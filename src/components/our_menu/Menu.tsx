@@ -26,6 +26,7 @@ export const Menu: React.FC<MenuProps> = (props: MenuProps) => {
                 alt="card-image"
                 width={200}
                 height={200}
+                priority
               />
               <S.CardWrapper>
                 <S.CardTitle>{menu.title}</S.CardTitle>

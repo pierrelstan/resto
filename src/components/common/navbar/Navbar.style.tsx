@@ -6,6 +6,17 @@ import styled from 'styled-components';
 // eslint-disable-next-line import/order
 import { ListProps, ToggleProps } from '@/utils/types';
 
+type StyleLinkProps = {
+  href: string;
+  path: string;
+};
+type stateProps = string;
+
+export const StyledLink = styled.a<StyleLinkProps>`
+  color: ${({ href, path, theme }: any) =>
+    href === path ? theme.colors.peach : theme.colors.white};
+`;
+
 export const Nav = styled.div`
   display: flex;
   justify-content: center;
