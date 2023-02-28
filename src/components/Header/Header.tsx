@@ -13,9 +13,6 @@ const Header: React.FC = () => {
         <Article1 data={data['one']} />
 
         <Button path={'menu'} title={'View Menu'} />
-        <S.Info>
-          <Address />
-        </S.Info>
       </SharedStyles.Wrapper>
       <SharedStyles.Wrapper>
         <S.HeaderImage
@@ -23,7 +20,8 @@ const Header: React.FC = () => {
           alt="hero-image"
           width={220}
           height={320}
-          sizes="100vh"
+          sizes="100vw"
+          priority
         />
       </SharedStyles.Wrapper>
     </SharedStyles.Section>
