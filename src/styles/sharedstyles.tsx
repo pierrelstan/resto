@@ -86,18 +86,16 @@ export const Column = styled.div`
 export const CustomContainer = styled.div`
   display: grid;
   gap: 5px;
-  max-width;1200px;
   justify-content: center;
-  margin-top: 120px;
   margin-bottom: 20px;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
 `;
 export const AContainer = styled.div`
   display: grid;
   align-items: center;
   margin-top: 120px;
   margin-bottom: 20px;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: 1fr;
   @media (min-width: 820px) {
     grid-template-columns: repeat(2, 1fr);
   }
