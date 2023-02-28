@@ -5,18 +5,12 @@ import { ITitleProps } from '@/utils/types';
 export const Section = styled.section`
   display: grid;
   gap: 55px;
-  justify-content: center;
   padding-bottom: 20px;
   padding-top: 120px;
-
-  grid-template-columns: repeat(1, 1fr);
-  @media (min-width: 850px) {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
-
-  @media (max-width: 1340px) {
-    overflow: hidden;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  @media (max-width: 850px) {
+    grid-template-columns: 1fr;
   }
 `;
 export const Section2 = styled.section`
