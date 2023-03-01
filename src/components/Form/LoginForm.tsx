@@ -39,7 +39,7 @@ const LoginForm = () => {
         </S.Label>
         <S.Input
           type="text"
-          {...register('name')}
+          {...register('email')}
           placeholder="Enter your Email"
         />
         {errors?.email && <p>{errors.email.message}</p>}
