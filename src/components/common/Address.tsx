@@ -22,9 +22,9 @@ const Address = () => {
         state.map((address, i) => (
           <div key={i}>
             <Titles title={address.title} color={'white'} fontSize={'30'} />
-            <SharedStyles.Text>{address.description}</SharedStyles.Text>
+            <SharedStyles.TextMap>{address.description}</SharedStyles.TextMap>
             {address.info && (
-              <SharedStyles.Text>{address.info}</SharedStyles.Text>
+              <SharedStyles.TextMap>{address.info}</SharedStyles.TextMap>
             )}
           </div>
         ))}

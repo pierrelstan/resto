@@ -4,11 +4,7 @@ import { ITitlesProps } from '@/utils/types';
 const Titles: React.FC<ITitlesProps> = (props) => {
   return (
     <SharedStyles.WrapperTitle>
-      <SharedStyles.Title
-        data-cy="title1"
-        fontSize={props.fontSize}
-        color={props.color}
-      >
+      <SharedStyles.Title fontSize={props.fontSize} color={props.color}>
         {props.title}
       </SharedStyles.Title>
 
