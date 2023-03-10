@@ -4,6 +4,7 @@ import { IFeaturesProps } from '@/utils/types';
 
 export const WrapperImages = styled.div`
   display: flex;
+  gap: 40px;
   @media (max-width: 995px) {
     flex-wrap: wrap;
     justify-content: center;
@@ -15,20 +16,7 @@ export const WrapperImages = styled.div`
 `;
 
 export const Img = styled(Image)<IFeaturesProps>`
-  display: flex;
   margin-top: ${(props) => (props.title === '0' ? '130px' : '0')};
-  margin-right: 50px;
-
-  @media (max-width: 1021px) {
-    flex-wrap: wrap;
-    margin-top: 0;
-    gap: 30px;
-  }
-  @media (max-width: 820px) {
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 10px;
-  }
 `;
 
 export const Features = styled.div`
