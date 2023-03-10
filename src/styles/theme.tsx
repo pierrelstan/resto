@@ -8,6 +8,7 @@ const theme: DefaultTheme = {
     grey: '#919092FF',
     cyan: '#C4E4EA',
     black: '#000000',
+    twine: '#FFDEC4',
   },
 };
 export default theme;

@@ -9,6 +9,7 @@ declare module 'styled-components' {
       grey: string;
       cyan: string;
       blackLight: string;
+      twine: string;
     };
   }
 }
