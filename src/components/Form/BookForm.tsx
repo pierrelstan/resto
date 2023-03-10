@@ -1,87 +1,84 @@
+import { ErrorMessage } from '@hookform/error-message';
 import { useForm } from 'react-hook-form';
+import {
+  IoCalendarOutline,
+  IoPeopleOutline,
+  IoTimeOutline,
+} from 'react-icons/io5';
+import { FormValues } from './Components';
 import * as S from './stylesForm';
 import Button from '../common/Button/Button';
-
-type BookFormValues = {
-  preventDefault(): unknown;
-  fullname?: string;
-  phone?: string;
-  date?: string;
-  time?: string;
-  people: number;
-};
 
 const BookForm = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<BookFormValues>();
+  } = useForm<FormValues>();
 
-  const onSubmit = async (data: BookFormValues) => {
+  const onSubmit = async (data: FormValues) => {
     console.log(data);
-  };
-
-  const handleKeyPress = (event: any) => {
-    const keyValue = event.key;
-    // Allow only numeric input
-    if (/[^0-9/-]/.test(keyValue)) {
-      event.preventDefault();
-    }
   };
   return (
     <S.Form onSubmit={handleSubmit(onSubmit)}>
-      <div>
-        <S.Wrapper>
-          <div>
+      <S.WrapperForm>
+        <div>
+          <S.WrapperLabel>
             <S.Label>
-              <label htmlFor="date">Pick a date:</label>
-            </S.Label>
-            <S.DateInput placeholder="" {...register('date')} />
-          </div>
-          <div>
-            <S.Label>
-              <label htmlFor="time">Select time:</label>
-            </S.Label>
-            <S.TimeInput {...register('time')} />
-          </div>
-          <div>
-            <S.Label>
-              <label htmlFor="time">For how many people:</label>
+              <IoCalendarOutline size={60} />
             </S.Label>
             <S.Input
+              {...register('date', {
+                required: 'This is required',
+              })}
+              type="date"
+            />
+          </S.WrapperLabel>
+          <ErrorMessage
+            errors={errors}
+            name={'date'}
+            render={({ message }) => <S.ErrorMessage>{message}</S.ErrorMessage>}
+          />
+        </div>
+        <div>
+          <S.WrapperLabel>
+            <S.Label>
+              <IoTimeOutline size={60} />
+            </S.Label>
+            <S.Input
+              {...register('guests', {
+                required: 'This is required',
+              })}
               type="number"
+              defaultValue="1"
               min="1"
               max="5"
-              {...register('people')}
-              defaultValue={1}
             />
-          </div>
-        </S.Wrapper>
-        <S.Label>
-          <label htmlFor="text">FirstName:</label>
-        </S.Label>
-        <S.Input
-          type="text"
-          placeholder="Enter your fullname"
-          {...register('fullname')}
-        />
-
-        <S.Label>
-          <label htmlFor="tel">Phone Number:</label>
-        </S.Label>
-        <S.Input
-          placeholder="123-452-6783"
-          type="tel"
-          maxLength={12}
-          onKeyPress={handleKeyPress}
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-          {...register('phone')}
-        />
-      </div>
-      <div>
+          </S.WrapperLabel>
+          <ErrorMessage
+            errors={errors}
+            name={'guests'}
+            render={({ message }) => <S.ErrorMessage>{message}</S.ErrorMessage>}
+          />
+        </div>
+        <div>
+          <S.Label>
+            <IoPeopleOutline size={60} />
+          </S.Label>
+          <select {...register('time')}>
+            {['8ham-11ham', '11ham-1hpm', '1hpm-3hpm', '3hpm-8hpm'].map(
+              (value: string) => (
+                <option value={value} key={value}>
+                  {value}
+                </option>
+              )
+            )}
+          </select>
+        </div>
+      </S.WrapperForm>
+      <S.WrapperButton>
         <Button title="Find a table" type="submit" />
-      </div>
+      </S.WrapperButton>
     </S.Form>
   );
 };

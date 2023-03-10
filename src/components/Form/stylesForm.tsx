@@ -1,4 +1,19 @@
+import Image from 'next/image';
 import styled from 'styled-components';
+
+export const Section = styled.div`
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  align-content: center;
+  height: 100vh;
+`;
+export const WrapperButton = styled.div`
+  margin-top: 140px;
+  display: flex;
+  justify-content: center;
+`;
+export const WrapperButtonBook = styled.div``;
 
 export const Form = styled.form`
   display: flex;
@@ -35,18 +50,41 @@ export const Form = styled.form`
   textarea {
     min-height: 10rem;
   }
+  input[type='tel'],
   input[type='date'],
-  input[type='time'],
-  input[type='number'] {
-    background-color: ${(props) => props.theme.colors.grey};
-    padding: 15px;
+  input[type='text'],
+  input[type='email'],
+  input[type='number']
+{
+
     font-family: 'Roboto Mono', monospace;
-    color: ${(props) => props.theme.colors.black} !important;
+    color: ${(props) => props.theme.colors.white} !important;
     font-size: 18px;
-    border: none;
+    border-color: ${(props) => props.theme.colors.grey}
     outline: none;
     border-radius: 5px;
     appearance: auto;
+  }
+
+
+ input[type='number'] {
+  color: ${(props) => props.theme.colors.black} !important;
+  background-color:#fff
+ }
+
+
+ input[type='date'] {
+  color: ${(props) => props.theme.colors.black} !important;
+  background-color:#fff
+ }
+
+  select {
+    padding: 15px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    border-color: ${(props) => props.theme.colors.grey}
+    outline: none;
+    border-radius: 5px;
   }
   input[type='number']::-webkit-inner-spin-button {
     opacity: 1;
@@ -90,14 +128,41 @@ export const Input = styled.input`
   }
 `;
 
-export const Label = styled.div`
-  font-family: 'Poppins', sans-serif;
-  margin-top: 10px;
-  margin-bottom: 10px;
-`;
-
 export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 100px;
+`;
+export const BookFormContainer = styled.form`
+  display: flex;
+  align-items: center;
+`;
+export const WrapperForm = styled.div`
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+`;
+
+export const WrapperLabel = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  // gap: 20px;
+`;
+export const Label = styled.div`
+  font-family: 'Poppins', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+`;
+export const ErrorMessage = styled.p`
+  color: red;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+`;
+export const HeaderImage = styled(Image)`
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 `;
