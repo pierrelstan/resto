@@ -7,7 +7,7 @@ export const Section = styled.section`
   gap: 55px;
   padding-bottom: 20px;
   padding-top: 120px;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
   align-items: center;
   @media (max-width: 850px) {
     grid-template-columns: 1fr;
@@ -39,31 +39,48 @@ export const WrapperTitle = styled.div`
 
 export const Title = styled.h1<ITitleProps>`
   font-size: ${(props) => props.fontSize}px;
-  color: ${(props) =>
-    props.color === 'white'
-      ? props.theme.colors.white
-      : props.color === 'peach'
-      ? props.theme.colors.peach
-      : props.color === 'cyan'
-      ? props.theme.colors.cyan
-      : props.theme.colors.grey};
+  color: ${(props) => {
+    switch (props.color) {
+      case 'white':
+        return `${props.theme.colors.white}`;
+      case 'peach':
+        return `${props.theme.colors.peach}`;
+      case 'cyan':
+        return `${props.theme.colors.cyan}`;
+      default:
+        return `${props.theme.colors.grey}`;
+    }
+  }};
   text-transform: ${(props) =>
     props.color === 'peach' ? 'uppercase' : 'none'};
   line-height: 110%;
   margin: 0;
   @media (max-width: 920px) {
     font-size: ${(props) =>
-      props.color === 'peach' ? `${props.fontSize}px` : '32px'};
+      props.color === 'peach' ? `${props.fontSize}px` : '22px'};
     text-transform: ${(props) =>
       props.color === 'peach' ? 'uppercase' : 'none'};
   }
 `;
 
 export const Text = styled.p`
-  font-size: 18px;
+  font-size: 20px;
   font-family: 'Poppins', sans-serif;
   color: ${(props) => props.theme.colors.grey};
-  line-height: 1.45em;
+
+  @media (max-width: 820px) {
+    font-size: 18px;
+  }
+`;
+
+export const TextMap = styled.p`
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+  color: ${(props) => props.theme.colors.grey};
+  lin-height: 1rem;
+  @media (max-width: 920px) {
+    font-size: 18px;
+  }
 `;
 
 export const TitleImage = styled(Image)``;
