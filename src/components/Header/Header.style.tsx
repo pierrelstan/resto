@@ -9,4 +9,5 @@ export const Info = styled.div`
 export const HeaderImage = styled(Image)`
   width: 100%;
   height: auto;
+  object-fit: cover;
 `;

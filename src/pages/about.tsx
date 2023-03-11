@@ -39,11 +39,27 @@ const About = () => {
           </Wrapper>
           <CustomImage data={data['featuresImage2']} />
         </Section>
-        <Reputation />
-        <Section2>
-          <Titles fontSize={'18'} color={'yellow'} title={'Our History'} />
-          <Timeline data={data['timeLine2']} />
-        </Section2>
+        <div
+          style={{
+            height: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <Reputation />
+        </div>
+        <div
+          style={{
+            height: '100vh',
+            display: 'flex',
+            alignItems: 'center',
+          }}
+        >
+          <Section2>
+            <Titles fontSize={'18'} color={'peach'} title={'Our History'} />
+            <Timeline data={data['timeLine2']} />
+          </Section2>
+        </div>
         <Map />
       </Layout>
     </div>

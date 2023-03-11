@@ -1,62 +1,17 @@
-import { useForm, Resolver } from 'react-hook-form';
-import { FormValues } from './ContactForm';
-import * as S from './stylesForm';
+import { Form, Input, Message } from './Components';
 import Button from '../common/Button/Button';
 
-const resolver: Resolver<FormValues> = async (values) => {
-  return {
-    values: values.email || values.password ? values : {},
-    errors: !values.email
-      ? {
-          email: {
-            type: 'required',
-            message: 'This is required.',
-          },
-        }
-      : !values.password
-      ? {
-          password: {
-            type: 'required',
-            message: 'This is required.',
-          },
-        }
-      : {},
-  };
-};
-
 const LoginForm = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormValues>({ resolver });
-  const onSubmit = handleSubmit((data) => console.log(data));
+  const onSubmit = (data: any) => console.log(data);
   return (
-    <S.Form onSubmit={onSubmit}>
+    <Form onSubmit={onSubmit}>
+      <Input name="Email" type="email" />
+      <Input name="Password" type="password" />
+
       <div>
-        <S.Label>
-          <label htmlFor="email">Email:</label>
-        </S.Label>
-        <S.Input
-          type="text"
-          {...register('name')}
-          placeholder="Enter your Email"
-        />
-        {errors?.email && <p>{errors.email.message}</p>}
-        <S.Label>
-          <label htmlFor="password">Password:</label>
-        </S.Label>
-        <S.Input
-          type="password"
-          {...register('password')}
-          placeholder="Enter yout password"
-        />
-        {errors?.password && <p>{errors.password.message}</p>}
+        <Button title="Send Message" type="submit" />
       </div>
-      <div>
-        <Button title="Send" type="submit" />
-      </div>
-    </S.Form>
+    </Form>
   );
 };
 

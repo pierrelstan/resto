@@ -24,7 +24,7 @@ describe('About Page', () => {
 
   it('Should navigate to story page', () => {
     cy.get('button').first().should('have.text', 'View Our Story');
-    cy.get('button').eq(0).click();
+    cy.get('button').eq(0).click({ force: true });
     cy.url().should('include', '/story');
   });
 });

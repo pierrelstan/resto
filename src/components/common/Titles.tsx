@@ -5,9 +5,9 @@ const Titles: React.FC<ITitlesProps> = (props) => {
   return (
     <SharedStyles.WrapperTitle>
       <SharedStyles.Title
-        data-cy="title1"
         fontSize={props.fontSize}
         color={props.color}
+        data-cy="title1"
       >
         {props.title}
       </SharedStyles.Title>
