@@ -1,19 +1,18 @@
 import React from 'react';
 import Layout from '@/components/common/Layout/Layout';
-import LoginForm from '@/components/Form/LoginForm';
+import SignUpForm from '@/components/Form/SignUpForm';
 import IndexHead from './IndexHead';
 
-const Login = () => {
+const SignUp = () => {
   return (
     <div>
       <IndexHead />
       <Layout>
         <div>
-          <LoginForm title="Login" />
+          <SignUpForm title="Sign up" />
         </div>
       </Layout>
     </div>
   );
 };
-
-export default Login;
+export default SignUp;

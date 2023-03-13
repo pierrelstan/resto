@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import List from '@/components/common/navbar/List';
+import ActiveLink from './ActiveLink';
 import * as S from './Navbar.style';
 
 const Navbar: React.FC = () => {
@@ -30,11 +31,11 @@ const Navbar: React.FC = () => {
       <S.ListItems toggle={toggle}>
         <List />
 
-        {/* <S.Button>
-          <ActiveLink href={'/login'} path={'/login'}>
+        <ActiveLink href={'/login'} path={'/login'}>
+          <S.Button>
             <S.ListItem>Login</S.ListItem>
-          </ActiveLink>
-        </S.Button> */}
+          </S.Button>
+        </ActiveLink>
       </S.ListItems>
     </S.Wrapper>
   );

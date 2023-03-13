@@ -46,6 +46,35 @@ export function Form({ defaultValues, children, onSubmit }: any) {
   );
 }
 
+export function FormContact({ defaultValues, children, onSubmit }: any) {
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm<FormValues>({
+    defaultValues,
+  });
+  console.log(children);
+  return (
+    <S.FormContact onSubmit={handleSubmit(onSubmit)}>
+      {Array.isArray(children)
+        ? children.map((child) => {
+            return child.props.name
+              ? React.createElement(child.type, {
+                  ...{
+                    ...child.props,
+                    register,
+                    errors,
+                    key: child.props.name,
+                  },
+                })
+              : child;
+          })
+        : children}
+    </S.FormContact>
+  );
+}
+
 export function Input({ register, name, errors, icons, ...rest }: any) {
   return (
     <div>

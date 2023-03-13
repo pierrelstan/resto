@@ -36,6 +36,12 @@ export const WrapperTitle = styled.div`
     gap: 10px;
   }
 `;
+export const WrapperTitleCenter = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 110px;
+`;
 
 export const Title = styled.h1<ITitleProps>`
   font-size: ${(props) => props.fontSize}px;

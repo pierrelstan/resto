@@ -1,6 +1,11 @@
 import Image from 'next/image';
 import styled from 'styled-components';
 
+export const WrapperLogin = styled.div`
+  margin-top: 120px;
+  margin-bottom: 100px;
+`;
+
 export const Section = styled.div`
   display: grid;
   justify-content: center;
@@ -8,16 +13,21 @@ export const Section = styled.div`
   align-content: center;
   height: 100vh;
 `;
+
 export const WrapperButton = styled.div`
   margin-top: 140px;
   display: flex;
   justify-content: center;
 `;
+
 export const WrapperButtonBook = styled.div``;
 
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
+export const FormBook = styled.form`
+  margin: auto;
+  @media (max-width: 800px) {
+    margin: 0;
+    width: auto;
+  }
 
   textarea {
     color: ${(props) => props.theme.colors.white};
@@ -26,6 +36,59 @@ export const Form = styled.form`
   ::placeholder {
     color: ${(props) => props.theme.colors.white};
   }
+  .button {
+    font: 1.25rem sans-serif;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border-style: solid;
+    border-color: ${(props) => props.theme.colors.peach};
+    padding: 0.75rem 2.25rem;
+    background: ${(props) => props.theme.colors.peach};
+    color: ${(props) => props.theme.colors.black};
+  }
+
+  textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background-color: ${(props) => props.theme.colors.blackLight};
+    border-style: solid;
+    border-color: ${(props) => props.theme.colors.grey};
+    border-width: 1px;
+    border-radius: 5px;
+  }
+
+  textarea {
+    min-height: 10rem;
+  }
+
+  input[type='date'],
+  input[type='number'] {
+    color: ${(props) => props.theme.colors.black} !important;
+    background: ${(props) => props.theme.colors.white} !important;
+  }
+
+  select,
+  options {
+    padding: 14px 15px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 18px;
+    border-color: ${(props) => props.theme.colors.grey};
+    background: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.black};
+    outline: none;
+    border-radius: 5px;
+  }
+  input[type='number']::-webkit-inner-spin-button {
+    opacity: 1;
+    height: 20px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+`;
+export const FormContact = styled.form`
   .button {
     font: 1.25rem sans-serif;
     border-radius: 0.25rem;
@@ -50,77 +113,67 @@ export const Form = styled.form`
   textarea {
     min-height: 10rem;
   }
-  input[type='tel'],
-  input[type='date'],
-  input[type='text'],
-  input[type='email'],
-  input[type='number']
-{
+`;
+export const Container = styled.div`
+  @media (max-width: 820px) {
+    padding-top: 200px;
+  }
+`;
+export const Form = styled.form`
+  margin: auto;
+  width: 50%;
 
-    font-family: 'Roboto Mono', monospace;
-    color: ${(props) => props.theme.colors.white} !important;
-    font-size: 18px;
-    border-color: ${(props) => props.theme.colors.grey}
-    outline: none;
-    border-radius: 5px;
-    appearance: auto;
+  @media (max-width: 800px) {
+    margin: 0;
+    width: auto;
   }
 
-
- input[type='number'] {
-  color: ${(props) => props.theme.colors.black} !important;
-  background-color:#fff
- }
-
-
- input[type='date'] {
-  color: ${(props) => props.theme.colors.black} !important;
-  background-color:#fff
- }
-
-  select {
-    padding: 15px;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 18px;
-    border-color: ${(props) => props.theme.colors.grey}
-    outline: none;
-    border-radius: 5px;
+  textarea {
+    color: ${(props) => props.theme.colors.white};
   }
-  input[type='number']::-webkit-inner-spin-button {
-    opacity: 1;
-    height: 20px;
-    width: 40px;
-    border-radius: 50%;
+
+  ::placeholder {
+    color: ${(props) => props.theme.colors.white};
+  }
+  .button {
+    font: 1.25rem sans-serif;
+    border-radius: 0.25rem;
     cursor: pointer;
+    border-style: solid;
+    border-color: ${(props) => props.theme.colors.peach};
+    padding: 0.75rem 2.25rem;
+    background: ${(props) => props.theme.colors.peach};
+    color: ${(props) => props.theme.colors.black};
+  }
+
+  textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background-color: ${(props) => props.theme.colors.blackLight};
+    border-style: solid;
+    border-color: ${(props) => props.theme.colors.grey};
+    border-width: 1px;
+    border-radius: 5px;
+  }
+
+  textarea {
+    min-height: 10rem;
   }
 `;
-export const TimeInput = styled.input.attrs({
-  type: 'time',
-})`
-  padding: 14px 8px;
-  border-radius: 2px;
-`;
 
-export const TelInput = styled.input.attrs((props) => ({
-  type: 'tel',
-  pattern: props.pattern,
-}))``;
-export const DateInput = styled.input.attrs({
-  type: 'date',
-})`
+export const Input = styled.input.attrs((props) => ({
+  type: props.type,
+}))`
+  width: 100%;
   padding: 14px 8px;
-  border-radius: 2px;
-`;
-
-export const Input = styled.input`
-  padding: 14px 8px;
-  background-color: ${(props) => props.theme.colors.blackLight};
+  background: transparent;
   margin-bottom: 20px;
   border-style: solid;
   border-color: ${(props) => props.theme.colors.grey};
   border-width: 1px;
   border-radius: 2px;
-  width: 100%;
   color: ${(props) => props.theme.colors.white} !important;
   @media (max-width: 420px) {
     padding: 18px 10px;
@@ -137,17 +190,19 @@ export const BookFormContainer = styled.form`
   display: flex;
   align-items: center;
 `;
-export const WrapperForm = styled.div`
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
+export const WrapperBookForm = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 820px) {
+    flex-direction: column;
+  }
 `;
 
 export const WrapperLabel = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  // gap: 20px;
 `;
 export const Label = styled.div`
   font-family: 'Poppins', sans-serif;

@@ -91,6 +91,7 @@ export const Button = styled.button`
   border-radius: 5px;
   color: inherit;
   padding: 10px 24px;
+  cursor: pointer;
 
   @media (max-width: 960px) {
     margin-left: 20px;
