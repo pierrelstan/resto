@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/router';
-import ActiveLink from './ActiveLink';
 import * as S from './Navbar.style';
 
 type StyleLinkProps = {
@@ -19,26 +18,27 @@ const List: React.FC = () => {
     { title: 'Our Story', path: '/story' },
     { title: 'Book a table', path: '/book' },
     { title: 'Contact', path: '/contact' },
+    // { title: 'Login', path: '/login' },
   ];
   // useEffect(() => {
   //   setState(href);
   // }, [state]);
 
-  const handleClick = (menu: any, e: any) => {
+  const handleClick = (page: any, e: any) => {
     e.preventDefault();
-    router.push(menu);
+    router.push(page);
   };
   return (
     <>
-      {array.map((menu, index) => (
+      {array.map((page, index) => (
         <S.ListItem key={index}>
           <S.NextLink>
             <S.StyledLink
-              href={menu.path}
+              href={page.path}
               path={router.asPath}
-              onClick={(e) => handleClick(menu.path, e)}
+              onClick={(e) => handleClick(page.path, e)}
             >
-              {menu.title}
+              {page.title}
             </S.StyledLink>
           </S.NextLink>
         </S.ListItem>

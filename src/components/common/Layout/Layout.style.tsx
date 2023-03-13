@@ -9,14 +9,15 @@ export const Container = styled.div`
 `;
 export const InnerLayout = styled.div`
   padding: 0 2.45rem;
-  margin-bottom: 1rem;
+  margin-bottom: 26rem;
 
   @media (min-width: 820px) {
     padding: 0 6.45rem;
+    margin-bottom: 3rem;
     width: 100%;
   }
-  @media (max-width: 280px) {
-    padding: 0px 0.45rem;
-    margin-bottom: 1rem;
-  }
+  // @media (max-width: 280px) {
+  //   padding: 0px 0.45rem;
+  //   margin-bottom: 1rem;
+  // }
 `;

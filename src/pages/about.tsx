@@ -1,4 +1,5 @@
 import Article1 from '@/components/common/Article1';
+import Button from '@/components/common/Button/Button';
 import CustomImage from '@/components/common/CustomImage';
 import Layout from '@/components/common/Layout/Layout';
 import Reputation from '@/components/common/Reputation';
@@ -18,6 +19,7 @@ const About = () => {
         <Section>
           <Wrapper>
             <Article1 data={data['two']} />
+            <Button path={'story'} title={'View Our Story'} />
             <S.Features>
               {data['timeLine1'].map((element, i) => (
                 <S.FWrapper key={i}>
