@@ -30,8 +30,8 @@ describe('Home Page', () => {
       );
   });
   it('Should navigate to menu page', () => {
-    cy.get('button').first().should('have.text', 'View Menu');
-    cy.get('button').eq(0).click();
+    cy.get('button').eq(1).should('have.text', 'View Menu');
+    cy.get('button').eq(1).click();
     cy.url().should('include', '/menu');
   });
 });

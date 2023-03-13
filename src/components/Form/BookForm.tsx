@@ -46,7 +46,7 @@ const BookForm = () => {
           <div>
             <S.WrapperLabel>
               <S.Label>
-                <IoTimeOutline size={60} />
+                <IoPeopleOutline size={60} />
               </S.Label>
               <S.Input
                 {...register('guests', {
@@ -68,7 +68,7 @@ const BookForm = () => {
           </div>
           <div>
             <S.Label>
-              <IoPeopleOutline size={60} />
+              <IoTimeOutline size={60} />
             </S.Label>
             <select {...register('time')}>
               {['8ham-11ham', '11ham-1hpm', '1hpm-3hpm', '3hpm-8hpm'].map(
