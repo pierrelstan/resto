@@ -33,8 +33,8 @@ interface ITitlesProps {
 interface AObj {
   fontSize: string;
   color: string;
+  description: string | Array<string>;
   title: string;
-  description: string;
 }
 
 type AProps = {
