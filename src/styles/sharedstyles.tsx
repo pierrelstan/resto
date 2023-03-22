@@ -72,6 +72,8 @@ export const Title = styled.h1<ITitleProps>`
 export const Text = styled.p`
   font-size: 20px;
   font-family: 'Poppins', sans-serif;
+  line-height: 1.4em;
+  white-space: pre-wrap;
   color: ${(props) => props.theme.colors.grey};
 
   @media (max-width: 820px) {
