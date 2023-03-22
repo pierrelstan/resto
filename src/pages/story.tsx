@@ -2,7 +2,6 @@ import React from 'react';
 import Article1 from '@/components/common/Article1';
 import CustomImage from '@/components/common/CustomImage';
 import Layout from '@/components/common/Layout/Layout';
-import Map from '@/components/Map/Map';
 import * as SharedStyles from '@/styles/sharedstyles';
 import { data } from '@/utils/data';
 import IndexHead from './IndexHead';
@@ -20,7 +19,6 @@ const Story = (props: Props) => {
           </SharedStyles.Wrapper>
           <CustomImage data={data['featuresImage3']} />
         </SharedStyles.Section>
-        <Map />
       </Layout>
     </div>
   );
