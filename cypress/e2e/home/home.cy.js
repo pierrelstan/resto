@@ -26,7 +26,7 @@ describe('Home Page', () => {
       .first()
       .should(
         'have.text',
-        'Through True Rich Attended does no end it his mother since favourable real had half every him case in packages enquire we up ecstatic.Through True Rich Attended does no end it his mother'
+        'Our dedication to excellence is central to everything we do. Come join us for dinner and experience the difference that high-quality ingredients and skilled preparation can make.'
       );
   });
   it('Should navigate to menu page', () => {
