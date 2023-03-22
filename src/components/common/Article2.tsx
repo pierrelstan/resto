@@ -6,7 +6,7 @@ import Titles from './Titles';
 
 interface AddressObj {
   title: string;
-  description: string;
+  description: string | Array<string>;
   info?: string;
   color: string;
   fontSize: string;
